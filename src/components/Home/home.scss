@@ -1,0 +1,54 @@
+@use 'src/styles/vars';
+
+.home-component {
+  text-align: center;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 15% 20% 30% 20% 15%;
+  grid-template-areas:
+    " . title . "
+    " . container . "
+    "projects container about"
+    " . container . "
+    " . . . "
+  ;
+
+  .home-title {
+    font: 60px 'Rajdhani';
+    grid-area: title;
+    place-self: center;
+    font-size: 60px;
+  }
+
+  .about-link {
+    grid-area: about;
+    align-self: center;
+    justify-self: flex-end;
+    margin-right: 1em;
+  }
+
+  .projects-link {
+    grid-area: projects;
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 1em;
+  }
+
+  .home-container {
+    grid-area: container;
+  }
+
+  .link {
+    font: 20px 'Rajdhani';
+    border: 1px white groove;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    cursor: pointer;
+    display: grid;
+    & a {
+      place-self: center;
+    }
+  }
+}
