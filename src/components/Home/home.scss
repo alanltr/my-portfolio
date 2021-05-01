@@ -7,7 +7,7 @@
   grid-template-columns: 10% auto 10%;
   grid-template-rows: 15% 20% 30% 20% 15%;
   grid-template-areas:
-    " . title . "
+    " . title infos"
     " . container . "
     "projects container about"
     " . container . "
@@ -33,6 +33,10 @@
     align-self: center;
     justify-self: flex-start;
     margin-left: 1em;
+  }
+
+  .infos-container {
+    grid-area: infos;
   }
 
   .home-container {

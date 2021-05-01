@@ -3,6 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+import Infos from 'src/components/Infos';
+
 // == Import
 import './home.scss';
 
@@ -29,6 +31,9 @@ const Home = () => (
           <br />
           WORK
         </Link>
+      </div>
+      <div className="infos-container">
+        <Infos />
       </div>
       <div className="home-container">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
