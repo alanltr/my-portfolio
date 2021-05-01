@@ -16,13 +16,13 @@ const About = () => (
     transition={{ duration: 0.5 }}
   >
     <div className="about-component">
-      <div className="title">
-        <h1 className="about-title">
+      <div className="neon">
+        <h1 className="title">
           a<span className="fast-flicker">b</span>out__<span className="flicker">m</span>e
         </h1>
       </div>
 
-      <div className="about-backlink">
+      <div className="about-backlink common-backlink">
         <Backlink />
       </div>
     </div>

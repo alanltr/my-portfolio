@@ -1,4 +1,25 @@
 .projects-component {
   text-align: center;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 15% 85%;
+  grid-template-areas: 
+    " . title backlink "
+    " . . . "
+  ;
+
+  .projects-backlink {
+    grid-area: backlink;
+    transform: rotate(270deg);
+    .arrow-container {
+      top: 20%;
+      left: 30%;
+    }
+  }
+
+  .neon {
+    // Tout le style des néons est centralisé dans index.scss
+    grid-area: title;
+  }
 }
