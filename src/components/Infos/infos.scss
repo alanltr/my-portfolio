@@ -11,6 +11,7 @@
   clip-path: circle(5% at 95% 11%);
   transition: all ease-in-out .3s;
   background-color:#ffffff;
+  z-index: 1;
   
   &-infoicon{
     position:absolute;
@@ -46,23 +47,6 @@
       &:hover{
          border-bottom-color: #0099ff;
       }
-    }
-  }
-  &-credits{
-    margin:0;
-    padding: 4px 0;
-    
-    font-size: 1.1em;
-  }
-  &-reference{
-    display:inline-block;
-    
-    border-bottom: 1px solid transparent;
-    color:#0099ff;
-    text-decoration:none;
-    transition: ease-in .3s;
-    &:hover{
-       border-bottom-color: #0099ff;
     }
   }
   

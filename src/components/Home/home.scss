@@ -1,6 +1,7 @@
 @use 'src/styles/vars';
 
 .home-component {
+  
   text-align: center;
   height: 100vh;
   display: grid;
@@ -41,9 +42,12 @@
 
   .home-container {
     grid-area: container;
+    place-self: center;
+    padding-right: 25%;
   }
 
   .link {
+    z-index: 1;
     font: 20px 'Rajdhani';
     border: 1px white groove;
     width: 90px;
@@ -54,5 +58,8 @@
     & a {
       place-self: center;
     }
+    
   }
 }
+
+
