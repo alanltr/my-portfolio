@@ -1,7 +1,8 @@
 // == Import npm
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+
+import Backlink from 'src/components/Backlink';
 
 // == Import
 import './about.scss';
@@ -15,13 +16,15 @@ const About = () => (
     transition={{ duration: 0.5 }}
   >
     <div className="about-component">
-      <h1>About</h1>
-      <Link to="/">
-        Go to Home
-      </Link>
-      <Link to="/projects">
-        Go to Projects
-      </Link>
+      <div className="title">
+        <h1 className="about-title">
+          a<span className="fast-flicker">b</span>out__<span className="flicker">m</span>e
+        </h1>
+      </div>
+
+      <div className="about-backlink">
+        <Backlink />
+      </div>
     </div>
   </motion.div>
 );
