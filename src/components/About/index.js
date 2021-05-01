@@ -17,7 +17,7 @@ const About = () => (
   >
     <div className="about-component">
       <div className="neon">
-        <h1 className="title">
+        <h1 className="neon-item">
           a<span className="fast-flicker">b</span>out__<span className="flicker">m</span>e
         </h1>
       </div>

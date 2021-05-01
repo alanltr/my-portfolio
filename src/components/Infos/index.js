@@ -12,13 +12,13 @@ const About = () => (
       <span className="card-infoicon">
         <img src={InfoIcon} alt="icone d'information" />
       </span>
-      <h1 className="card-title">A propos de ce portfolio</h1>
+      <h1 className="card-title">Some informations about this site</h1>
       <div className="card-description">
-        J'ai réalisé ce portfolio en combinant React & Redux.
+        I realised this portfolio by using React & Redux.
         <br />
-        Le background de fumée en 3D a été fait à la main en ThreeJs.
+        The smoke background was made by hand with ThreeJs.
         <br />
-        Le projet dans son intégralité est consultable <a href="https://github.com/alanltr/my-portfolio" target="_blank" rel="noreferrer">ici</a> !
+        The entire project can be viewed on its <a href="https://github.com/alanltr/my-portfolio" target="_blank" rel="noreferrer">git repository</a> !
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-$total-lines: 5;
+$total-lines: 7;
 /*
 ** Leave these unless you want
 ** to open a whole can of worms
@@ -46,6 +46,11 @@ $line-height: $clip-height - 5px;
     &:nth-child(#{$i}) {
       left: $left-offset * $i;
     }
+  }
+
+
+  .emoji {
+    font-size: 75%;
   }
 }
 

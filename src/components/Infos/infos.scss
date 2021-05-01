@@ -1,5 +1,7 @@
+@use 'src/styles/vars';
 
 .card{
+  font-family: 'Rajdhani';
   position:relative;
   color: #000000;
   padding:20px 15px;
@@ -53,8 +55,8 @@
   &:hover, &:focus{
     clip-path: circle(75%);
     border-radius:20px;
-    box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
-                0px 3px 18px rgba(0,0,0,0.08);
+    box-shadow: 0px 3px 9px rgba(255, 255, 255, 0.12),
+                0px 3px 18px rgba(255, 255, 255, 0.08);
     background:#ffffff;
     
     outline:none;
@@ -63,8 +65,8 @@
     }
   }
   &:focus{
-    box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 
-                0px 3px 18px rgba(0,0,0,0.08), 
-                0px 0px 0px 4px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 9px rgba(255, 255, 255, 0.12), 
+                0px 3px 18px rgba(255, 255, 255, 0.08), 
+                0px 0px 0px 4px rgba(255, 255, 255, 0.2);
   }
 }

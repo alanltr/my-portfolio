@@ -17,7 +17,7 @@ const Projects = () => (
   >
     <div className="projects-component">
       <div className="neon">
-        <h1 className="title">
+        <h1 className="neon-item">
           m<span className="fast-flicker">y</span>__wo<span className="flicker">r</span>k
         </h1>
       </div>
