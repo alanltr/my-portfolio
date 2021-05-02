@@ -2,7 +2,6 @@
 @use 'vars';
 
 body {
-  font-family: sans-serif;
   overflow: hidden;
 }
 
@@ -20,60 +19,79 @@ canvas {
 }
 
 
+
 /**
-*  Titres néons
+*  Néons / Titres néons
 */
+
+$gray: #333;
+
 .neon {
   width: 100%;
   align-self: end;
 }
 .neon-item {
-font-family: 'neon';
-text-transform: uppercase;
-font-size: 5em;
-text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ffe1f2,
-  -0.2rem 0.1rem 1rem #ffe3f3;
-animation: shine 2s forwards, flicker 3s infinite;
+  font-family: 'neon';
+  text-transform: uppercase;
+  font-size: 5em;
+  animation: shine 2s forwards, flicker 3s infinite;
 }
 
-@keyframes blink {
-  0%,
-  22%,
-  36%,
-  75% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ffe1f2,
-      -0.2rem 0.1rem 1rem #ffe3f3;
-  }
-  28%,
-  33% {
-    color: #ffe8f5;
-    text-shadow: none;
-  }
-  82%,
-  97% {
-    color: #ffe8f2;
-    text-shadow: none;
-  }
-}
 
 .flicker {
-  animation: shine 2s forwards, blink 3s 2s infinite;
+  animation: shine 2s forwards, blinker linear infinite 4s;
 }
 
 .fast-flicker {
-  animation: shine 2s forwards, blink 10s 1s infinite;
+  animation: shine 2s forwards, blinker linear infinite 2s;
 }
 
 @keyframes shine {
   0% {
-    color: #6b1839;
+    color: $gray;
     text-shadow: none;
   }
   100% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ffe1f2,
-      -0.2rem 0.1rem 1rem #ffe3f3;
+    color: vars.$neonColor;
+    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 25%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
+      -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+  }
+}
+
+@keyframes blinker {
+  78% {
+    color: vars.$neonColor;
+    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
+    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+  }
+  79%{
+     color: $gray;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: vars.$neonColor;
+    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
+    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+  }
+  82% {
+    color: $gray;
+    text-shadow: none;
+  }
+  83% {
+    color: vars.$neonColor;
+    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
+    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+  }
+  92% {
+    color: $gray;
+    text-shadow: none;
+  }
+  92.5% {
+    color: vars.$neonColor;
+    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
+    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
   }
 }
 

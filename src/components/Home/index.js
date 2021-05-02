@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Infos from 'src/components/Infos';
 import HomeContent from 'src/components/HomeContent';
 import NavButton from 'src/components/NavButton';
+import NeonAlone from 'src/components/NeonAlone';
 
 // == Import
 import './home.scss';
@@ -35,6 +36,18 @@ const Home = () => (
       </div>
       <div className="home-container">
         <HomeContent />
+      </div>
+      <div className="neon-container neon-container-1">
+        <NeonAlone num={1} />
+      </div>
+      <div className="neon-container neon-container-2">
+        <NeonAlone num={2} />
+      </div>
+      <div className="neon-container neon-container-3">
+        <NeonAlone num={3} />
+      </div>
+      <div className="neon-container neon-container-4">
+        <NeonAlone num={4} />
       </div>
     </div>
   </motion.div>

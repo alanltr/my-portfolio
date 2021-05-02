@@ -9,9 +9,9 @@
   grid-template-rows: 15% 20% 30% 20% 15%;
   grid-template-areas:
     "   .     .     .     . infos"
-    "   .     . container .   .  "
+    "   .     neon1 container neon3   .  "
     "projects . container . about"
-    "   .     . container .   .  "
+    "   .     neon2 container neon4   .  "
     "   .     .     .     .   .  "
   ;
 
@@ -37,8 +37,22 @@
   .home-container {
     grid-area: container;
     place-self: center;
-    padding-right: 40%;
+    padding-right: 25vw;
   }
+
+  .neon-container-1 {
+    grid-area: neon1;
+  }
+  .neon-container-2 {
+    grid-area: neon2;
+  }
+  .neon-container-3 {
+    grid-area: neon3;
+  }
+  .neon-container-4 {
+    grid-area: neon4;
+  }
+
 }
 
 

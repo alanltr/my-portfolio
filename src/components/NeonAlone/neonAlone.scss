@@ -1,0 +1,21 @@
+@use 'src/styles/vars';
+
+//?/  Le style néon est dans l'index.scss
+
+.neon-container {
+  position: relative;
+  transform: rotate(270deg);
+  
+  .neon-alone {
+    position: absolute;
+    font: 700% 'neon';
+    right: -430%;
+  }
+
+  .neon-1, .neon-2 {
+    top: 20%;
+  }
+  .neon-3, .neon-4 {
+    top: -20%;
+  }
+}
