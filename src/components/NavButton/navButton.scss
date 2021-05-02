@@ -7,6 +7,7 @@ $borderWidth: 3px;
 
 .navlink {
   display: grid;
+  align-self: center;
   z-index: 2;
 
   // Pulse animation
@@ -20,6 +21,7 @@ $borderWidth: 3px;
 
   .button-container-3 {
     align-self: center;
+    justify-self: center;
     position: relative;
     overflow: hidden;
     border: $borderWidth solid $mainColor;
