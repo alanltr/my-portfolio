@@ -1,7 +1,6 @@
 // == Import npm
 import React from 'react';
 
-
 // == Import
 import './homeContent.scss';
 
@@ -22,14 +21,14 @@ const HomeContent = () => (
     </li>
     <li className="words-line">
       <p>le trocquer.</p>
-      <p>Welcome to</p>
+      <p>Welcome to my</p>
     </li>
     <li className="words-line">
-      <p>Welcome to</p>
-      <p>my portfolio</p>
+      <p>Welcome to my</p>
+      <p>first portfolio</p>
     </li>
     <li className="words-line">
-      <p>my portfolio</p>
+      <p>first portfolio</p>
       <p>Enjoy your</p>
     </li>
     <li className="words-line">

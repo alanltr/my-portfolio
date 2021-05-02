@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 // == Import npm
 import React from 'react';
 // import InfoIcon from '@material-ui/icons/Info';
@@ -18,7 +19,7 @@ const About = () => (
         <br />
         The smoke background was made by hand with ThreeJs.
         <br />
-        The entire project can be viewed on its <a href="https://github.com/alanltr/my-portfolio" target="_blank" rel="noreferrer">git repository</a> !
+        The entire project can be viewed on its <a href="https://github.com/alanltr/my-portfolio" target="_blank" rel="noreferrer">github repository</a> !
       </div>
     </div>
   </div>
