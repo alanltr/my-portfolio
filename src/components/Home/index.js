@@ -6,6 +6,7 @@ import Infos from 'src/components/Infos';
 import HomeContent from 'src/components/HomeContent';
 import NavButton from 'src/components/NavButton';
 import NeonAlone from 'src/components/NeonAlone';
+import SocialMedia from 'src/components/SocialMedia';
 
 // == Import
 import './home.scss';
@@ -48,6 +49,9 @@ const Home = () => (
       </div>
       <div className="neon-container neon-container-4">
         <NeonAlone num={4} />
+      </div>
+      <div className="social-media-container">
+        <SocialMedia />
       </div>
     </div>
   </motion.div>

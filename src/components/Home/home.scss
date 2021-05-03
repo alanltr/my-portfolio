@@ -8,11 +8,11 @@
   grid-template-columns: 10% 2% auto 2% 10%;
   grid-template-rows: 15% 20% 30% 20% 15%;
   grid-template-areas:
-    "   .     .     .     . infos"
-    "   .     neon1 container neon3   .  "
-    "projects . container . about"
-    "   .     neon2 container neon4   .  "
-    "   .     .     .     .   .  "
+    "   .     .       .       .  infos"
+    "   .   neon1 container neon3  .  "
+    "projects .   container   .  about"
+    "   .   neon2     .     neon4  .  "
+    "   .     .     medias    .    .  "
   ;
 
   .home-title {
@@ -38,6 +38,10 @@
     grid-area: container;
     place-self: center;
     padding-right: 25vw;
+  }
+
+  .social-media-container {
+    grid-area: medias;
   }
 
   .neon-container-1 {
