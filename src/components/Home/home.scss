@@ -11,7 +11,7 @@
     "   .     .       .       .  infos"
     "   .   neon1 container neon3  .  "
     "projects .   container   .  about"
-    "   .   neon2     .     neon4  .  "
+    "   .   neon2   medias  neon4  .  "
     "   .     .     medias    .    .  "
   ;
 
@@ -40,10 +40,6 @@
     padding-right: 25vw;
   }
 
-  .social-media-container {
-    grid-area: medias;
-  }
-
   .neon-container-1 {
     grid-area: neon1;
   }
@@ -55,6 +51,64 @@
   }
   .neon-container-4 {
     grid-area: neon4;
+  }
+
+  .social-media-container {
+    grid-area: medias;
+    justify-self: center;
+    width: 70%;
+    display: grid;
+
+    // Début de la pop div
+    .pop-div {
+      color: white;
+      height: 75%;
+      width: 100%;
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      z-index: 2;
+
+      & > * {
+        background-color: #616161;
+
+      }
+      
+      
+      .pop-title {
+        color: white;
+        font: 25px 'Rajdhani';
+        font-weight: bold;
+        width: 30%;
+        height: 50px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin: 0 auto;
+        border: 3px #FF83EE solid;
+        border-bottom: none;
+        cursor: pointer;
+        padding-top: 8px;
+
+      }
+
+      .pop-content {
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+      }
+
+    }
+    .pop-div {
+      .pop-title {
+      }
+
+      .pop-content.close {
+        display: none;
+      }
+    }
   }
 
 }

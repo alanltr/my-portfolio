@@ -51,7 +51,14 @@ const Home = () => (
         <NeonAlone num={4} />
       </div>
       <div className="social-media-container">
-        <SocialMedia />
+        <div className="pop-div">
+          <div className="pop-title">
+            Contact
+          </div>
+          <div className="pop-content">
+            <SocialMedia />
+          </div>
+        </div>
       </div>
     </div>
   </motion.div>
