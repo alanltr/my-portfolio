@@ -39,19 +39,24 @@
     place-self: center;
     padding-right: 25vw;
     margin-top: 17%;
+    user-select: none;
   }
 
   .neon-container-1 {
     grid-area: neon1;
+    user-select: none;
   }
   .neon-container-2 {
     grid-area: neon2;
+    user-select: none;
   }
   .neon-container-3 {
     grid-area: neon3;
+    user-select: none;
   }
   .neon-container-4 {
     grid-area: neon4;
+    user-select: none;
   }
 
   .social-media-container {
@@ -103,6 +108,7 @@
         overflow: hidden;
 
         .pop-close {
+          user-select: none;
           font: 30px 'Rajdhani';
           font-weight: bold;
           color: red;
