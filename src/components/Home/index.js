@@ -12,56 +12,60 @@ import SocialMedia from 'src/components/SocialMedia';
 import './home.scss';
 
 // == Composant
-const Home = () => (
-  <motion.div
-    initial={{ scaleX: 0 }}
-    animate={{ scaleX: 1 }}
-    exit={{ scaleX: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <div className="home-component">
-      <NavButton
-        navLink="/projects"
-        styleClass="projects-link"
-        firstWord="My"
-        secondWord="Work"
-      />
-      <NavButton
-        navLink="/about"
-        styleClass="about-link"
-        firstWord="About"
-        secondWord="Me"
-      />
-      <div className="infos-container">
-        <Infos />
-      </div>
-      <div className="home-container">
-        <HomeContent />
-      </div>
-      <div className="neon-container neon-container-1">
-        <NeonAlone num={1} />
-      </div>
-      <div className="neon-container neon-container-2">
-        <NeonAlone num={2} />
-      </div>
-      <div className="neon-container neon-container-3">
-        <NeonAlone num={3} />
-      </div>
-      <div className="neon-container neon-container-4">
-        <NeonAlone num={4} />
-      </div>
-      <div className="social-media-container">
-        <div className="pop-div">
-          <div className="pop-title">
-            Contact
-          </div>
-          <div className="pop-content">
-            <SocialMedia />
+const Home = ({ isOpenSocialMedia }) => {
+  console.log(isOpenSocialMedia)
+  
+  return (
+    <motion.div
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      exit={{ scaleX: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="home-component">
+        <NavButton
+          navLink="/projects"
+          styleClass="projects-link"
+          firstWord="My"
+          secondWord="Work"
+        />
+        <NavButton
+          navLink="/about"
+          styleClass="about-link"
+          firstWord="About"
+          secondWord="Me"
+        />
+        <div className="infos-container">
+          <Infos />
+        </div>
+        <div className="home-container">
+          <HomeContent />
+        </div>
+        <div className="neon-container neon-container-1">
+          <NeonAlone num={1} />
+        </div>
+        <div className="neon-container neon-container-2">
+          <NeonAlone num={2} />
+        </div>
+        <div className="neon-container neon-container-3">
+          <NeonAlone num={3} />
+        </div>
+        <div className="neon-container neon-container-4">
+          <NeonAlone num={4} />
+        </div>
+        <div className="social-media-container">
+          <div className="pop-div">
+            <div className="pop-title">
+              Contact
+            </div>
+            <div className="pop-content">
+              <SocialMedia />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 // == Export
 export default Home;
