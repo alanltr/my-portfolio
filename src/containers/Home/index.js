@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 // on importe le composant de présentation
 import Home from 'src/components/Home';
 
+import { toggleIsOpenSocialMedia } from 'src/actions/homeActions';
+
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
@@ -11,7 +13,9 @@ const mapStateToProps = (state) => ({
 
 // === mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
-  
+  toggleIsOpenSocialMedia: () => {
+    dispatch(toggleIsOpenSocialMedia());
+  },
 });
 
 // === création de l'assistant

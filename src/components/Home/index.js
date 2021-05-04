@@ -1,6 +1,8 @@
 // == Import npm
 import React from 'react';
 import { motion } from 'framer-motion';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import Infos from 'src/components/Infos';
 import HomeContent from 'src/components/HomeContent';
@@ -12,9 +14,13 @@ import SocialMedia from 'src/components/SocialMedia';
 import './home.scss';
 
 // == Composant
-const Home = ({ isOpenSocialMedia }) => {
-  console.log(isOpenSocialMedia)
-  
+const Home = ({
+  isOpenSocialMedia,
+  toggleIsOpenSocialMedia,
+}) => {
+  const popDivClassname = classNames('pop-content', { close: !isOpenSocialMedia });
+  const popTitleClassname = classNames('pop-title', { close: isOpenSocialMedia });
+
   return (
     <motion.div
       initial={{ scaleX: 0 }}
@@ -55,10 +61,11 @@ const Home = ({ isOpenSocialMedia }) => {
         </div>
         <div className="social-media-container">
           <div className="pop-div">
-            <div className="pop-title">
+            <div className={popTitleClassname} onClick={toggleIsOpenSocialMedia}>
               Contact
             </div>
-            <div className="pop-content">
+            <div className={popDivClassname}>
+              <div className="pop-close" onClick={toggleIsOpenSocialMedia}><div>+</div></div>
               <SocialMedia />
             </div>
           </div>
@@ -67,5 +74,11 @@ const Home = ({ isOpenSocialMedia }) => {
     </motion.div>
   );
 };
+
+Home.propTypes = {
+  isOpenSocialMedia: PropTypes.bool.isRequired,
+  toggleIsOpenSocialMedia: PropTypes.func.isRequired,
+};
+
 // == Export
 export default Home;

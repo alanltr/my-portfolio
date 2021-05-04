@@ -38,6 +38,7 @@
     grid-area: container;
     place-self: center;
     padding-right: 25vw;
+    margin-top: 17%;
   }
 
   .neon-container-1 {
@@ -71,8 +72,10 @@
       z-index: 2;
 
       & > * {
-        background-color: #616161;
-
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.103));
+        backdrop-filter: blur(20px);
+        border: 1px groove rgba(255,255,255,0.2);
+        border-bottom: none;
       }
       
       
@@ -85,7 +88,6 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         margin: 0 auto;
-        border: 3px #FF83EE solid;
         border-bottom: none;
         cursor: pointer;
         padding-top: 8px;
@@ -93,19 +95,52 @@
       }
 
       .pop-content {
-        height: 100%;
+        height: 80%;
         width: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        position: relative;
+        overflow: hidden;
 
+        .pop-close {
+          font: 30px 'Rajdhani';
+          font-weight: bold;
+          color: red;
+          display: inline;
+          position: absolute;
+          right: 0%;
+          top: 0%;
+          width: 45px;
+          height: 25px;
+          border-bottom-left-radius: 20px;
+          border-left: 1px groove rgba(255,255,255,0.2);
+          border-bottom: 1px groove rgba(255,255,255,0.2);
+          cursor: pointer;
+
+          &:active {
+            background-color: #800000;
+            color: white;
+            box-shadow: inset 8px 8px 10px #740000,
+            inset -8px -8px 10px #8c0000;
+          }
+
+          div {
+            transform: rotate(45deg);
+            position: absolute;
+            top: -30%;
+            left: 30%;
+          }
+        }
       }
 
     }
     .pop-div {
-      .pop-title {
-      }
 
       .pop-content.close {
+        display: none;
+      }
+
+      .pop-title.close {
         display: none;
       }
     }
