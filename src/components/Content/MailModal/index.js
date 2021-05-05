@@ -11,6 +11,10 @@ import './mailModal.scss';
 const MailModal = ({
   isOpen,
   toggleIsOpen,
+  email,
+  mailObject,
+  mailContent,
+  changeField,
 }) => {
   const body = (
     <div className="modal-component glassmorphism">
@@ -19,17 +23,26 @@ const MailModal = ({
         <form noValidate autoComplete="off">
           <TextField
             type="email"
+            name="email"
+            value={email}
+            onChange={changeField}
             id="filled-secondary"
             label="Votre email"
             variant="filled"
           />
           <TextField
             type="text"
+            name="mailObject"
+            value={mailObject}
+            onChange={changeField}
             id="filled-secondary"
             label="L'objet de votre mail (70 caractères max)"
             variant="filled"
           />
           <TextField
+            name="mailContent"
+            value={mailContent}
+            onChange={changeField}
             id="filled-multiline-static"
             label="Votre mail ici (300 caractères max)"
             multiline

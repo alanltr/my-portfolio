@@ -10,7 +10,7 @@ import NavButton from 'src/components/DesignElements/NavButton';
 import NeonAlone from 'src/components/DesignElements/NeonAlone';
 import SocialMedia from 'src/components/Content/SocialMedia';
 import LittleArrows from 'src/components/DesignElements/LittleArrows';
-import MailModal from 'src/components/Content/MailModal';
+import MailModal from 'src/containers/MailModal';
 
 // == Import
 import './home.scss';
