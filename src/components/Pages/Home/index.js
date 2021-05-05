@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Infos from 'src/components/Infos';
-import HomeContent from 'src/components/HomeContent';
-import NavButton from 'src/components/NavButton';
-import NeonAlone from 'src/components/NeonAlone';
-import SocialMedia from 'src/components/SocialMedia';
+import Infos from 'src/components/DesignElements/Infos';
+import HomeContent from 'src/components/Content/HomeContent';
+import NavButton from 'src/components/DesignElements/NavButton';
+import NeonAlone from 'src/components/DesignElements/NeonAlone';
+import SocialMedia from 'src/components/Content/SocialMedia';
 import LittleArrows from 'src/components/DesignElements/LittleArrows';
 
 // == Import

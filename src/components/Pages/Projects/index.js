@@ -2,27 +2,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import Backlink from 'src/components/Backlink';
+import Backlink from 'src/components/DesignElements/Backlink';
 
 // == Import
-import './about.scss';
+import './projects.scss';
 
 // == Composant
-const About = () => (
+const Projects = () => (
   <motion.div
-    initial={{ translateX: 1500 }}
+    initial={{ translateX: -1500 }}
     animate={{ translateX: 0 }}
     exit={{ translateX: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="about-component">
+    <div className="projects-component">
       <div className="neon">
         <h1 className="neon-item">
-          a<span className="fast-flicker">b</span>out__<span className="flicker">m</span>e
+          m<span className="fast-flicker">y</span>__wo<span className="flicker">r</span>k
         </h1>
       </div>
 
-      <div className="about-backlink common-backlink">
+      <div className="projects-backlink common-backlink">
         <Backlink />
       </div>
     </div>
@@ -30,4 +30,4 @@ const About = () => (
 );
 
 // == Export
-export default About;
+export default Projects;

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 // on importe le composant de présentation
-import Home from 'src/components/Home';
+import Home from 'src/components/Pages/Home';
 
 import { toggleIsOpenSocialMedia } from 'src/actions/homeActions';
 

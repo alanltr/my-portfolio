@@ -3,9 +3,9 @@ import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import About from 'src/components/About';
+import About from 'src/components/Pages/About';
 import Home from 'src/containers/Home';
-import Projects from 'src/components/Projects';
+import Projects from 'src/components/Pages/Projects';
 
 // == Import
 import './styles.scss';
