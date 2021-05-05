@@ -18,6 +18,8 @@
       margin:0 5px;
 
       a {
+        user-select: none;
+        cursor: pointer;
         text-decoration: none;
         display:absolute;
         display:block;

@@ -10,6 +10,7 @@ import NavButton from 'src/components/DesignElements/NavButton';
 import NeonAlone from 'src/components/DesignElements/NeonAlone';
 import SocialMedia from 'src/components/Content/SocialMedia';
 import LittleArrows from 'src/components/DesignElements/LittleArrows';
+import MailModal from 'src/components/Content/MailModal';
 
 // == Import
 import './home.scss';
@@ -18,6 +19,8 @@ import './home.scss';
 const Home = ({
   isOpenSocialMedia,
   toggleIsOpenSocialMedia,
+  isOpenModalMail,
+  toggleIsOpenModalMail,
 }) => {
   const popDivClassname = classNames('pop-content', { close: !isOpenSocialMedia });
   const popTitleClassname = classNames('pop-title', { close: isOpenSocialMedia });
@@ -75,7 +78,17 @@ const Home = ({
             </div>
             <div className={popDivClassname}>
               <div className="pop-close" onClick={toggleIsOpenSocialMedia}><div>+</div></div>
-              <SocialMedia />
+              <SocialMedia
+                toggleIsOpenModalMail={toggleIsOpenModalMail}
+                toggleIsOpenSocialMedia={toggleIsOpenSocialMedia}
+
+              />
+            </div>
+            <div className="mail-modal-container">
+              <MailModal
+                isOpen={isOpenModalMail}
+                toggleIsOpen={toggleIsOpenModalMail}
+              />
             </div>
           </div>
         </div>
@@ -87,6 +100,8 @@ const Home = ({
 Home.propTypes = {
   isOpenSocialMedia: PropTypes.bool.isRequired,
   toggleIsOpenSocialMedia: PropTypes.func.isRequired,
+  isOpenModalMail: PropTypes.bool.isRequired,
+  toggleIsOpenModalMail: PropTypes.func.isRequired,
 };
 
 // == Export
