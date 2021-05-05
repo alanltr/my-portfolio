@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // on importe le composant de présentation
 import MailModal from 'src/components/Content/MailModal';
 
-import { changeField } from 'src/actions/homeActions';
+import { changeField, sendEmail } from 'src/actions/homeActions';
 
 // === mapStateToProps
 // si j'ai besoin de lire des informations dans le state
@@ -16,8 +16,10 @@ const mapStateToProps = (state) => ({
 // === mapDispatchToProps
 const mapDispatchToProps = (dispatch) => ({
   changeField: (newValue) => {
-    console.log(newValue.target.value)
     dispatch(changeField(newValue.target.value, newValue.target.name));
+  },
+  sendEmail: () => {
+    dispatch(sendEmail());
   },
 });
 

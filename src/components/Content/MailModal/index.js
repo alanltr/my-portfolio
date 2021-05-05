@@ -15,19 +15,25 @@ const MailModal = ({
   mailObject,
   mailContent,
   changeField,
+  sendEmail,
 }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendEmail();
+  };
+
   const body = (
     <div className="modal-component glassmorphism">
-      <h2 id="simple-modal-title">Formulaire de contact</h2>
+      <h2 id="simple-modal-title">Contact Form</h2>
       <div id="simple-modal-description">
-        <form noValidate autoComplete="off">
+        <form onSubmit={handleSubmit} noValidate autoComplete="off">
           <TextField
             type="email"
             name="email"
             value={email}
             onChange={changeField}
             id="filled-secondary"
-            label="Votre email"
+            label="Your email"
             variant="filled"
           />
           <TextField
@@ -36,7 +42,7 @@ const MailModal = ({
             value={mailObject}
             onChange={changeField}
             id="filled-secondary"
-            label="L'objet de votre mail (70 caractères max)"
+            label="Your mail's object - ( 50 chars max )"
             variant="filled"
           />
           <TextField
@@ -44,7 +50,7 @@ const MailModal = ({
             value={mailContent}
             onChange={changeField}
             id="filled-multiline-static"
-            label="Votre mail ici (300 caractères max)"
+            label="Your content here - ( 300 chars max )"
             multiline
             rows={5}
             variant="filled"
@@ -74,6 +80,11 @@ const MailModal = ({
 MailModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   toggleIsOpen: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
+  mailObject: PropTypes.string.isRequired,
+  mailContent: PropTypes.string.isRequired,
+  changeField: PropTypes.func.isRequired,
+  sendEmail: PropTypes.func.isRequired,
 };
 
 // == Export
