@@ -25,7 +25,7 @@ const MailModal = ({
   const classes = useStyles();
 
   const body = (
-    <div className="modal-component">
+    <div className="modal-component glassmorphism">
       <h2 id="simple-modal-title">Formulaire de contact</h2>
       <div id="simple-modal-description">
         <form className={classes.root} noValidate autoComplete="off">
