@@ -3,7 +3,7 @@ import {
 } from 'src/actions/homeActions';
 
 const initialState = {
-  isOpenSocialMedia: true,
+  isOpenSocialMedia: false,
 };
 
 function homeReducer(state = initialState, action = {}) {

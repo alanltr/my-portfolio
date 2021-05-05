@@ -96,6 +96,24 @@
         border-bottom: none;
         cursor: pointer;
         padding-top: 8px;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+          "leftarrows title rightarrows"
+        ;
+
+        .little-arrow-container-1 {
+          grid-area: leftarrows;
+        }
+
+        .little-arrow-container-2 {
+          grid-area: rightarrows;
+        }
+
+        .text {
+          grid-area: title;
+        }
 
       }
 
@@ -153,5 +171,3 @@
   }
 
 }
-
-

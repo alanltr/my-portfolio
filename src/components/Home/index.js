@@ -9,6 +9,7 @@ import HomeContent from 'src/components/HomeContent';
 import NavButton from 'src/components/NavButton';
 import NeonAlone from 'src/components/NeonAlone';
 import SocialMedia from 'src/components/SocialMedia';
+import LittleArrows from 'src/components/DesignElements/LittleArrows';
 
 // == Import
 import './home.scss';
@@ -62,7 +63,15 @@ const Home = ({
         <div className="social-media-container">
           <div className="pop-div">
             <div className={popTitleClassname} onClick={toggleIsOpenSocialMedia}>
-              Contact
+              <div className="little-arrow-container-1 little-arrow-container">
+                <LittleArrows />
+              </div>
+              <div className="text">
+                Contact
+              </div>
+              <div className="little-arrow-container-2 little-arrow-container">
+                <LittleArrows />
+              </div>
             </div>
             <div className={popDivClassname}>
               <div className="pop-close" onClick={toggleIsOpenSocialMedia}><div>+</div></div>
