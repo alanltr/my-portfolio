@@ -59,6 +59,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.58",
     "classnames": "^2.3.1",
+    "emailjs-com": "^2.6.4",
     "framer-motion": "^4.1.11",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
