@@ -20,8 +20,7 @@ const authMiddleware = (store) => (next) => (action) => {
           mailContent,
           mailObject,
         }, 'user_wYfNoF7rHFsS51qpjcqiQ',
-      ).then((res) => {
-        console.log('Email successfully sent!', res);
+      ).then(() => {
         // Success case
         store.dispatch(setSuccessMessage('Votre mail a été envoyé avec succès !'));
         store.dispatch(setIsASuccess(true));
