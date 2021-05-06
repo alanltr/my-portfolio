@@ -11,6 +11,7 @@ import NeonAlone from 'src/components/DesignElements/NeonAlone';
 import SocialMedia from 'src/components/Content/SocialMedia';
 import LittleArrows from 'src/components/DesignElements/LittleArrows';
 import MailModal from 'src/containers/MailModal';
+import PersonalSnackbar from 'src/containers/PersonalSnackbar';
 
 // == Import
 import './home.scss';
@@ -91,6 +92,9 @@ const Home = ({
               />
             </div>
           </div>
+        </div>
+        <div className="snackbar-container">
+          <PersonalSnackbar />
         </div>
       </div>
     </motion.div>

@@ -8,7 +8,7 @@
   grid-template-columns: 10% 2% auto 2% 10%;
   grid-template-rows: 15% 20% 30% 20% 15%;
   grid-template-areas:
-    "   .     .       .       .  infos"
+    "   .     .    snackbar   .  infos"
     "   .   neon1 container neon3  .  "
     "projects .   container   .  about"
     "   .   neon2   medias  neon4  .  "
@@ -32,6 +32,11 @@
 
   .infos-container {
     grid-area: infos;
+  }
+
+  .snackbar-container {
+    grid-area: snackbar;
+    justify-self: center;
   }
 
   .home-container {
