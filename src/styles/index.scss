@@ -25,8 +25,20 @@ canvas {
 
 .glassmorphism {
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.103));
-  backdrop-filter: blur(20px);
-  border: 1px groove rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  z-index: 1;
+}
+.glassmorphism-1 {
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.103));
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+  box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
+  z-index: 2;
 }
 
 

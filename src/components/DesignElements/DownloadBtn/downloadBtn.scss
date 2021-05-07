@@ -1,0 +1,175 @@
+$size: 120px;
+$width: 8px;
+$mainColor: white;
+$validColor: green;
+.download-btn {
+  position: relative;
+  
+  .ms-content {
+    position: absolute;
+    width: $size;
+    height: $size;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: $width solid rgba(255, 255, 255, 0.226);
+    border-radius: 100%;
+
+    .ms-content-inside {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      #ms-download {
+        display: none;
+      }
+      #ms-download:checked ~ .ms-line-down-container {
+        transform: rotate(-360deg);
+        transition: transform 1.5s ease 1.25s;
+      }
+      #ms-download:checked ~ .ms-line-down-container .ms-line-down {
+        height: $width;
+        animation: ms-bounce .5s forwards .55s;
+      }
+      #ms-download:checked ~ .ms-line-down-container .ms-line-down:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: -56px;
+        right: 0;
+        bottom: 0;
+        width: $size;
+        height: $size;
+        border: $width solid transparent;
+        border-radius: 100%;
+        animation: ms-border-fill .5s forwards 3s;
+      }
+      // Flèche une fois validé
+      #ms-download:checked ~ .ms-line-point {
+        height: 60px;
+
+        &::before {
+          transform: rotate(90deg);
+          right: 0px;
+          animation: ms-check-right .25s forwards 3s;
+        }
+        &::after {
+          transform: rotate(-90deg);
+          left: 0px;
+          animation: ms-check-left .25s forwards 3s;
+        }
+      }
+
+      .ms-line-down-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: rotate(0deg);
+        transition: transform 0s ease;
+    
+        .ms-line-down {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 2px;
+          margin: auto;
+          width: $width;
+          height: 90px; // hauteur de la flèche
+          background: $mainColor;
+          border-radius: 50px;
+          transition: height .5s ease;
+        }
+      }
+      .ms-line-point {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 43px;
+        height: 112px;
+        transition: height .15s ease .45s;
+    
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: $width;
+          height: 50px;
+          bottom: 5px;
+          background: $mainColor;
+          border-radius: 50px;
+          transition: transform .15s ease .47s, left .15s ease .47s, right .15s ease .47s;
+        }
+    
+        &::before {
+          right: 0px;
+          transform: rotate(45deg);
+        }
+        &::after {
+          left: 2px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  // Animations
+  @keyframes ms-bounce {
+    0% {
+      top: 0px;
+    }
+    25% {
+      top: -250px;
+    }
+    50% {
+      top: -275px;
+    }
+    100% {
+      top: -110px;
+    }
+  }
+  
+  @keyframes ms-check-left {
+    0% {
+      transform: rotate(-90deg);
+      left: -10px;
+      height: 75px;
+    }
+    100% {
+      transform: rotate(-45deg);
+      left: 0px;
+      height: 35px;
+    }
+  }
+  
+  @keyframes ms-check-right {
+    0% {
+      transform: rotate(90deg);
+      right: -10px;
+      height: 65px;
+      bottom: -5px;
+    }
+    100% {
+      transform: rotate(45deg);
+      right: 5px;
+      height: 60px;
+      bottom: 0px;
+    }
+  }
+  
+  @keyframes ms-border-fill {
+    0% {
+      border: $width solid transparent;
+    }
+    100% {
+      border: $width solid $validColor;
+    }
+  }
+}

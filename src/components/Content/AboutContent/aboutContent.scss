@@ -1,0 +1,138 @@
+@use 'src/styles/vars';
+
+// Grille de tout le container
+.about-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 65% 35%;
+  grid-template-areas: 
+    " left right "
+    " left bottom"
+  ;
+
+  .left-section {
+    grid-area: left;
+    padding: 2.5em 1em 0.5em 1em;
+  }
+  .bottom-section {
+    grid-area: bottom;
+    margin-left: -24vw;
+    margin-bottom: 2vw;
+  }
+  .right-section {
+    grid-area: right;
+    padding-bottom: 15px;
+  }
+
+  .left-section-title {
+    position: absolute;
+    padding-top: 6px;
+    top: -30px;
+    left: 50px;
+    height: 7vh;
+    width: 25vw;
+    text-transform: uppercase;
+    font: 40px 'Rajdhani';
+
+  }
+  
+
+  .bottom-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      width: 120px;
+    }
+    // + grosse taille pour les logo node et mongodb
+    .logo-display-7,
+    .logo-display-8 {
+      img {
+        width: 180px;
+      }
+    }
+  }
+  // Grille de la .left-section
+  .left-section {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 65% 35%;
+    grid-template-areas:
+      " content content "
+      " download . "
+    ;
+
+    .left-section-content {
+      grid-area: content;
+      font: 19px 'Rajdhani';
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .left-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .left {
+          width: 30%;
+          color: vars.$neonColor;
+          font-size: 16px;
+          font-style: italic;
+          margin-bottom: -40px;
+        }
+        .right {
+          width: 60%;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .download-btn {
+      grid-area: download;
+      margin-right: 35px;
+      margin-top: 20px;
+    }
+  }
+  // Grille de la .right-section
+  .right-section {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 45% 10% 45%;
+    grid-template-areas: 
+    " css html js"
+      " . . . "
+      " react redux sass"
+    ;
+
+    & > * {
+      place-self: center;
+    }
+
+    img {
+      width: 100px;
+    }
+
+    .logo-display-1 {
+      grid-area: react;
+    }
+    .logo-display-2 {
+      grid-area: redux;
+    }
+    .logo-display-3 {
+      grid-area: sass;
+    }
+    .logo-display-4 {
+      grid-area: html;
+    }
+    .logo-display-5 {
+      grid-area: css;
+    }
+    .logo-display-6 {
+      grid-area: js;
+      img {
+        width: 80px;
+      }
+    }
+  }
+  
+}

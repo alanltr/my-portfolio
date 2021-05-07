@@ -3,6 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import Backlink from 'src/components/DesignElements/Backlink';
+import AboutContent from '../../Content/AboutContent';
+
 
 // == Import
 import './about.scss';
@@ -21,23 +23,19 @@ const About = () => (
           a<span className="fast-flicker">b</span>out__<span className="flicker">m</span>e
         </h1>
       </div>
-
       <div className="about-backlink common-backlink">
         <Backlink />
       </div>
       <div className="about-presentation">
-        « I’m a french front-end developer currently based in France.
-        I studied at O'Clock and i'm now graduated as web an web mobile developer.
-        Passionate about UI & UX, i love building interfaces and code interactive productions.
+        « I’m a french developer currently based in France.
+        Passionate about UI, UX & web security, i love
+        building interfaces and code interactive productions.
         I’m looking for a full time position from now as a front-end developer
         anywhere in the world. Which would bring together my two dreams,
         to see the world and do the job that I love. »
       </div>
-      <div className="left-section glassmorphism">
-        left
-      </div>
-      <div className="right-section glassmorphism">
-        right
+      <div className="about-content">
+        <AboutContent />
       </div>
     </div>
   </motion.div>
