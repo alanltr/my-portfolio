@@ -4,11 +4,12 @@
   text-align: center;
   height: 100vh;
   display: grid;
-  grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 15% 85%;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: 15% 30% 55%;
   grid-template-areas: 
-    " backlink title . "
-    " . . . "
+    " backlink title title . "
+    " . prez prez . "
+    " . left right . "
   ;
 
   .about-backlink {
@@ -23,6 +24,29 @@
   .neon {
     // Tout le style des néons est centralisé dans index.scss
     grid-area: title;
+  }
+
+  .about-presentation {
+    grid-area: prez;
+  }
+
+  .left-section {
+    grid-area: left;
+  }
+
+  .right-section {
+    grid-area: right;
+  }
+
+  .left-section, .right-section {
+    margin: 0 2em 3em 2em;
+    border-radius: 20px;
+  }
+
+  .about-presentation {
+    place-self: center;
+    font: 25px 'Rajdhani';
+    margin: 0 5em;
   }
 }
 
