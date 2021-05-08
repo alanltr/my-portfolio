@@ -2,9 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import Backlink from 'src/components/DesignElements/Backlink';
-
 // == Import
+import Backlink from 'src/components/DesignElements/Backlink';
 import './projects.scss';
 
 // == Composant
