@@ -41,6 +41,56 @@
     font: 25px 'Rajdhani';
     margin: 0 5em;
   }
+}
+// TABLET
+@media only screen and (min-width : 769px) and (max-width : 1050px) {
+  .about-component {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 12% 30% 58%;
+    grid-template-areas: 
+      " backlink title . "
+      " . prez . "
+      " content content content "
+    ;
 
+    .about-presentation {
+      margin: 0;
+    }
+    .about-content {
+      padding: 1.5em;
+      .left-section-title {
+        height: 5vh;
+        border-radius: 10px;
+        top: 0;
+      }
+      .left-section {
+        .left-section-content {
+          font-size: 18px;
+          .left-wrapper{
+            .left {
+              margin-left: 7px;
+              font-size: 15px;
+            }
+            .right {
+              font-size: 16px;
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+      .right-section {
+        img {
+          width: 80px;
+        }
+      }
+
+      .bottom-section {
+        margin-bottom: 40px;
+        img {
+          width: 100px;
+        }
+      }
+    }
+  }
 }
 

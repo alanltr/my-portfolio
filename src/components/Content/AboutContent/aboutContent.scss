@@ -27,13 +27,14 @@
 
   .left-section-title {
     position: absolute;
-    padding-top: 6px;
+    display: grid;
+    place-content: center;
     top: -30px;
     left: 50px;
     height: 7vh;
     width: 25vw;
     text-transform: uppercase;
-    font: 40px 'Rajdhani';
+    font: 3vw 'Rajdhani';
 
   }
   
@@ -84,6 +85,7 @@
         .right {
           width: 60%;
           font-size: 18px;
+          padding-bottom: 5px
         }
       }
     }
@@ -100,7 +102,7 @@
     grid-template-columns: 33% 34% 33%;
     grid-template-rows: 45% 10% 45%;
     grid-template-areas: 
-    " css html js"
+    " html css js"
       " . . . "
       " react redux sass"
     ;

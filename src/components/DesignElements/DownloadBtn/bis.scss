@@ -1,5 +1,5 @@
-$size: 60px;
-$width: 5px;
+$size: 120px;
+$width: 8px;
 $mainColor: white;
 $validColor: green;
 .download-btn {
@@ -36,8 +36,8 @@ $validColor: green;
       #ms-download:checked ~ .ms-line-down-container .ms-line-down:before {
         content: '';
         position: absolute;
-        top: 0;
-        left: -27px;
+        top: 0px;
+        left: -56px;
         right: 0;
         bottom: 0;
         width: $size;
@@ -64,7 +64,7 @@ $validColor: green;
 
       .ms-line-down-container {
         position: absolute;
-        top: 1px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -79,7 +79,7 @@ $validColor: green;
           bottom: 2px;
           margin: auto;
           width: $width;
-          height: 45px; // hauteur de la flèche
+          height: 90px; // hauteur de la flèche
           background: $mainColor;
           border-radius: 50px;
           transition: height .5s ease;
@@ -87,13 +87,13 @@ $validColor: green;
       }
       .ms-line-point {
         position: absolute;
-        top: 1px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         margin: auto;
-        width: 23px;
-        height: 61px;
+        width: 43px;
+        height: 112px;
         transition: height .15s ease .45s;
     
         &::before,
@@ -101,7 +101,7 @@ $validColor: green;
           content: '';
           position: absolute;
           width: $width;
-          height: 25px;
+          height: 50px;
           bottom: 5px;
           background: $mainColor;
           border-radius: 50px;
@@ -132,7 +132,7 @@ $validColor: green;
       top: -275px;
     }
     100% {
-      top: -55px;
+      top: -110px;
     }
   }
   
@@ -140,13 +140,12 @@ $validColor: green;
     0% {
       transform: rotate(-90deg);
       left: -10px;
-      height: 35px;
+      height: 75px;
     }
     100% {
       transform: rotate(-45deg);
-      left: 1px;
-      height: 17.5px;
-      bottom: 15px;
+      left: 0px;
+      height: 35px;
     }
   }
   
@@ -154,13 +153,14 @@ $validColor: green;
     0% {
       transform: rotate(90deg);
       right: -10px;
-      height: 35px;
+      height: 65px;
+      bottom: -5px;
     }
     100% {
       transform: rotate(45deg);
-      right: 3px;
-      height: 30px;
-      bottom: 13px;
+      right: 5px;
+      height: 60px;
+      bottom: 0px;
     }
   }
   
