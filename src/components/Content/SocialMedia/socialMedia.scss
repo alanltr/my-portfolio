@@ -15,7 +15,7 @@
     
     li {
       list-style:none;
-      margin:0 5px;
+      margin:0 5px; // écart entre les tuiles
 
       a {
         user-select: none;
@@ -134,4 +134,29 @@
       background: #423f3f;
     }
   }
+}
+// Tablette
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+  .social-media-component {
+    ul {
+      li {
+        margin:0 25px; // écart entre les tuiles
+        
+        a {
+          padding-left: 16px;
+          width: 60px;
+          height: 50px;
+
+          svg {
+            font-size: 35px;
+            margin-top: 5px;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
 }

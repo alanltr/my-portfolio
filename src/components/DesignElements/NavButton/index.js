@@ -25,7 +25,7 @@ const NavButton = ({
         <span className="mas">
           {
           navLink === '/projects'
-            ? <ArrowBackIosIcon style={{ marginLeft: '20px' }} />
+            ? <ArrowBackIosIcon />
             : <ArrowForwardIosIcon />
           }
         </span>

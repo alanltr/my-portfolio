@@ -15,6 +15,9 @@
     "   .     .     medias    .    .  "
   ;
 
+  .projects-link.navlink > div > span > svg {
+    margin-left: 20px; // correction du decalage naturel du svg
+  }
   .home-title {
     font: 60px 'Rajdhani';
     grid-area: title;
@@ -76,7 +79,6 @@
     // Début de la pop div
     .pop-div {
       color: white;
-      // height: 75%;
       width: 100%;
       align-self: flex-end;
       display: flex;
@@ -183,6 +185,7 @@
 
 }
 
+// Mini Pc
 @media only screen and (min-width : 768px) and (max-width : 1050px) {
   .home-component {
     grid-template-areas:
@@ -201,6 +204,81 @@
     }
     .projects-link {
       margin-right: -28px;
+    }
+  }
+
+}
+
+// Tablette
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+  .home-component {
+    // Boutons de nav
+    .navlink .button-container-3 {
+      height: 75px;
+      width: 75px;
+      button {
+        font-size: 100%;
+      }
+      .mas svg {
+        height: 35px;
+        width: 35px;
+      }
+    }
+    .about-link {
+      margin-left: -48px;
+    }
+    .projects-link {
+      margin-right: -48px;
+      & > .button-container-3 span.mas svg {
+        margin-left: 15px; // correction du decalage naturel du svg
+      }
+    }
+    
+
+    // Display texte escalier
+    .home-container {
+      .words {
+        display: none;
+      }
+      
+    }
+
+
+    // Néons
+    .neon-container {
+      .neon-alone {
+        font-size: 570%;
+      }
+      .neon-1, .neon-2, .neon-3, .neon-4 {
+        left: -115px;
+      }
+    }
+
+
+    // Placement du composant Infos
+    .infos-container > div > div.card {
+      margin-left: -265px;
+    }
+
+
+    // Social Media footer
+    .social-media-container {
+      min-width: 440px;
+      .pop-div {
+        // Div CONTACT
+        .pop-title {
+          width: 200px;
+          height: 40px;
+          align-items: flex-end;
+        }
+
+        .pop-content {
+          height: 130px;
+          .social-media-component {
+            margin-top: 60px;
+          }
+        }
+      }
     }
   }
 
