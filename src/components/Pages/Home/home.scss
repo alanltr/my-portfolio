@@ -5,7 +5,7 @@
   text-align: center;
   height: 100vh;
   display: grid;
-  grid-template-columns: 10% 2% auto 2% 10%;
+  grid-template-columns: 10% 2% 76% 2% 10%;
   grid-template-rows: 15% 20% 30% 20% 15%;
   grid-template-areas:
     "   .     .    snackbar   .  infos"
@@ -24,10 +24,12 @@
 
   .about-link {
     grid-area: about;
+    justify-self: flex-start;
   }
 
   .projects-link {
     grid-area: projects;
+    justify-self: flex-end;
   }
 
   .infos-container {
@@ -67,13 +69,14 @@
   .social-media-container {
     grid-area: medias;
     justify-self: center;
-    width: 70%;
+    align-self: flex-end;
+    width: 92%;
     display: grid;
 
     // Début de la pop div
     .pop-div {
       color: white;
-      height: 75%;
+      // height: 75%;
       width: 100%;
       align-self: flex-end;
       display: flex;
@@ -83,7 +86,7 @@
 
       & > * {
         background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.103));
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(10px);
         border: 1px groove rgba(255,255,255,0.2);
         border-bottom: none;
       }
@@ -93,7 +96,7 @@
         color: white;
         font: 25px 'Rajdhani';
         font-weight: bold;
-        width: 30%;
+        width: 280px;
         height: 50px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
@@ -102,6 +105,7 @@
         cursor: pointer;
         padding-top: 8px;
         display: grid;
+        text-transform: uppercase;
         grid-template-columns: 25% 50% 25%;
         grid-template-rows: 100%;
         grid-template-areas: 
@@ -123,8 +127,10 @@
       }
 
       .pop-content {
-        height: 80%;
+        height: 200px;
         width: 100%;
+        max-width: 760px;
+        margin: auto;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         position: relative;
@@ -172,6 +178,29 @@
       .pop-title.close {
         display: none;
       }
+    }
+  }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1050px) {
+  .home-component {
+    grid-template-areas:
+    "   .     .    snackbar  .    infos"
+    "   .   neon1 container neon3   .  "
+    "projects .   container  .    about"
+    "   .   neon2     .    neon4    .  "
+    "medias medias medias medias medias"
+  ;
+
+    .home-container {
+      padding-right: 31vw; // placement du texte escalier
+    }
+    .about-link {
+      margin-left: -28px;
+    }
+    .projects-link {
+      margin-right: -28px;
     }
   }
 

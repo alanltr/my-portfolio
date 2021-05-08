@@ -21,14 +21,14 @@ const HomeContent = () => (
     </li>
     <li className="words-line">
       <p>le trocquer.</p>
-      <p>Welcome to my</p>
+      <p>Welcome to</p>
     </li>
     <li className="words-line">
-      <p>Welcome to my</p>
-      <p>first portfolio</p>
+      <p>Welcome to</p>
+      <p>my portfolio</p>
     </li>
     <li className="words-line">
-      <p>first portfolio</p>
+      <p>my portfolio</p>
       <p>Enjoy your</p>
     </li>
     <li className="words-line">

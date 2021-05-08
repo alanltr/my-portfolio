@@ -115,3 +115,9 @@ $mainColor: wheat;
     }
   }
 }
+
+@media only screen and (min-width : 768px) and (max-width : 1050px) {
+  .modal-component {
+    width: 55%;
+  }
+}

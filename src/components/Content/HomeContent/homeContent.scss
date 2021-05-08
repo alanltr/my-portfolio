@@ -77,3 +77,21 @@ p {
     transform: translate3d(0, -($clip-height), 0);
   }
 }
+@media only screen and (min-width : 768px) and (max-width : 1050px) {
+  .words {
+    font-size: 50px;
+    .words-line {
+      height: 50px;
+
+      @for $i from 1 through $total-lines+1 {
+        &:nth-child(#{$i}) {
+          left: 28px * $i;
+        }
+      }
+
+      p {
+        line-height: 45px;
+      }
+    }
+  }
+}
