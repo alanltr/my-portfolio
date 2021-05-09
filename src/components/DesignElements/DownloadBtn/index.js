@@ -11,7 +11,7 @@ const DownloadBtn = () => {
   const handleCheck = (e) => {
     // Si checkbox cochée, on simule le click de download
     if (e.target.checked) {
-      // triggerEl.current.click();
+      triggerEl.current.click();
     }
   };
 

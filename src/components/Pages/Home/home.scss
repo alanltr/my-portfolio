@@ -50,6 +50,9 @@
     padding-right: 25vw;
     margin-top: 17%;
     user-select: none;
+    .under-767px-display {
+      display: none;
+    }
   }
 
   .neon-container-1 {
@@ -235,12 +238,25 @@
     }
     
 
-    // Display texte escalier
     .home-container {
+      margin: 0;
+      padding: 0;
+      width: 70%;
+      margin-top: 4em;
+      .under-767px-display {
+        font: 40px 'Rajdhani';
+        display: block;
+        span {
+          font-size: 75%;
+        }
+      }
+
+
+
+      // Display texte escalier
       .words {
         display: none;
       }
-      
     }
 
 

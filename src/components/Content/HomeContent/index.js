@@ -7,13 +7,15 @@ import './homeContent.scss';
 // == Composant
 const HomeContent = () => (
   <>
-    {/* <div className="typing-demo">
+    <div className="under-767px-display">
       Hi people !<br />
       I am Alan Le Trocquer.<br />
       Welcome to my portfolio.<br />
       Enjoy your visit 🔥.<br />
-      To make the most of the site, come and see it with a slightly larger screen.
-    </div> */}
+      <span>
+        To make the most of the site, come and see it with a slightly larger screen.
+      </span>
+    </div>
     <ul className="words">
       <li className="words-line">
         <p>&nbsp;</p>
