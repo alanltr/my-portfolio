@@ -68,8 +68,7 @@ const MailModal = ({
       <Modal
         open={isOpen}
         onClose={toggleIsOpen}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
+        aria-labelledby="contact-form"
       >
         {body}
       </Modal>

@@ -2,13 +2,13 @@ $mainColor: wheat;
 
 .modal-component {
   width: 40%;
-  height: 46%;
   margin: 10em auto;
   color: white;
   border-radius: 20px;
   padding: 1em 2em;
   font-family: 'Rajdhani';
   color: $mainColor;
+  outline: none;
 
   form > * {
     width: 100%;

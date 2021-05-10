@@ -68,3 +68,16 @@ $arrow-line-width: 4px;
     }
   }
 }
+
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+  .arrow-container {
+    height: 75px;
+    .arrow {
+      &:before,
+      &:after {
+        width: 3px;
+        height: 30px;
+      }
+    }
+  }
+}

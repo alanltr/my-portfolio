@@ -31,7 +31,7 @@ const AboutContent = () => (
         jungle. You can contact me from my main page's footer.
         <div className="left-wrapper">
           <div className="left">
-            You also can download my C.V (PDF 329ko) by clicking the arrow just below.
+            You also can download my C.V (PDF 329ko) by clicking the arrow
           </div>
           <div className="right">
             I put here back & front technologies

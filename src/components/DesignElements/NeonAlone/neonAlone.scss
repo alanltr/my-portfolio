@@ -3,21 +3,21 @@
 //?/  Le style néon est dans l'index.scss
 
 .neon-container {
-  position: relative;
-  transform: rotate(270deg);
-  
-  .neon-alone {
-    position: absolute;
-    font: 700% 'neon';
-    right: -430%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .neon-alone {    
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    font: 700% 'neon';
+  }
+  
   .neon-1, .neon-2 {
-    left: -142px;
-    top: 20%;
+    transform: rotate(270deg);
   }
   .neon-3, .neon-4 {
-    left: -142px;
-    top: -20%;
+    transform: rotate(90deg);
   }
 }
