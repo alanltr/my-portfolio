@@ -1,0 +1,113 @@
+
+$depth: 6rem;
+.content-container {
+  position: relative;
+
+  .slides {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    > .slide {
+      grid-area: 1 / -1;
+    }
+
+    > button {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      font-size: 12vw;
+      width: 5rem;
+      height: 5rem;
+      top: 30%;
+      transition: opacity 0.3s;
+      z-index: 5;
+
+      &:hover {
+        opacity: 1;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:last-child {
+        right: 0;
+      }
+    }
+  }
+  
+  .slideContent {
+    border-radius: 10px;
+    width: 60vw;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-in-out;
+    display: grid;
+    align-content: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateX(calc(100% * var(--offset)))
+      rotateY(calc(-45deg * var(--dir)));
+  }
+
+  .slideContentInner {
+    font-family: 'Rajdhani';
+    transform-style: preserve-3d;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+
+    .slideTitle {
+      font-size: 10vw;
+      transform: translateZ($depth);
+      font-family: 'Rajdhani';
+      font-weight: bold;
+      letter-spacing: 0.2ch;
+      text-transform: capitalize;
+      margin: 0;
+      color: rgb(0, 0, 0);
+      
+      animation: shineWord 3s infinite linear;
+      background: linear-gradient(to right, #000000 0, white 10%, #000000 20%);
+      background-position: 0;
+
+      text-decoration: none;
+      white-space: nowrap;
+      background-position: 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation-fill-mode: forwards;
+      -webkit-text-size-adjust: none;
+    }
+  }
+
+  .slide[data-active] {
+    z-index: 2;
+    pointer-events: auto;
+
+    .slideContentInner {
+      opacity: 1;
+    }
+
+    .slideContent {
+      --x: calc(var(--px) - 0.5);
+      --y: calc(var(--py) - 0.5);
+      opacity: 1;
+
+      transform: perspective(1000px);
+
+      &:hover {
+        transition: none;
+        transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
+          rotateX(calc(var(--y) * -45deg));
+      }
+    }
+  }
+
+  @keyframes shineWord {
+    0% { background-position: 0%} 
+    // 60% {background-position: -100%}
+    100% {background-position: 55vw}
+  }
+
+}

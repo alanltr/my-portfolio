@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 // == Import
 import Backlink from 'src/components/DesignElements/Backlink';
+import ProjectsContent from 'src/containers/ProjectsContent';
 import './projects.scss';
 
 // == Composant
@@ -23,6 +24,9 @@ const Projects = () => (
 
       <div className="projects-backlink common-backlink">
         <Backlink />
+      </div>
+      <div className="content-container">
+        <ProjectsContent />
       </div>
     </div>
   </motion.div>

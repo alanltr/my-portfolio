@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
 
-import homeReducer from './homeReducer';
+import mainReducer from './mainReducer';
 
 const rootReducer = combineReducers({
-  // nom du tiroir : reducer qui gère cette partie du state
-  home: homeReducer,
+  main: mainReducer,
 });
 export default rootReducer;

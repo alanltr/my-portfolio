@@ -6,10 +6,9 @@ import Home from 'src/components/Pages/Home';
 import { toggleIsOpenSocialMedia, toggleIsOpenModalMail } from 'src/actions/homeActions';
 
 // === mapStateToProps
-// si j'ai besoin de lire des informations dans le state
 const mapStateToProps = (state) => ({
-  isOpenSocialMedia: state.home.isOpenSocialMedia,
-  isOpenModalMail: state.home.isOpenModalMail,
+  isOpenSocialMedia: state.main.isOpenSocialMedia,
+  isOpenModalMail: state.main.isOpenModalMail,
 });
 
 // === mapDispatchToProps

@@ -1,3 +1,4 @@
+import slides from 'src/assets/data';
 import {
   TOGGLE_IS_OPEN_SOCIAL_MEDIA,
   TOGGLE_IS_OPEN_MODAL_MAIL,
@@ -6,6 +7,10 @@ import {
   SET_SUCCESS_MESSAGE,
   TOGGLE_IS_OPEN_SNACKBAR,
 } from 'src/actions/homeActions';
+import {
+  PREVIOUS_ITEM,
+  NEXT_ITEM,
+} from 'src/actions/projectsActions';
 
 const initialState = {
   // Home
@@ -19,6 +24,10 @@ const initialState = {
   successMessage: 'reducers',
   isASuccess: true,
   isOpenSnackbar: false,
+  // ProjectsContent | Slides
+  slides,
+  nbOfProject: slides.length,
+  slideIndex: 0,
 };
 
 function homeReducer(state = initialState, action = {}) {
@@ -52,6 +61,16 @@ function homeReducer(state = initialState, action = {}) {
       return {
         ...state,
         successMessage: action.newValue,
+      };
+    case PREVIOUS_ITEM:
+      return {
+        ...state,
+        slideIndex: (state.slideIndex + 1) % state.slides.length,
+      };
+    case NEXT_ITEM:
+      return {
+        ...state,
+        slideIndex: state.slideIndex === 0 ? state.slides.length - 1 : state.slideIndex - 1,
       };
     default:
       return state;
