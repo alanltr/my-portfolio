@@ -11,7 +11,7 @@ const authMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case SEND_EMAIL: {
       store.dispatch(toggleIsOpenModalMail());
-      const { email, mailContent, mailObject } = store.getState().home;
+      const { email, mailContent, mailObject } = store.getState().main;
 
       emailjs.send(
         'service_k4ozl88', 'template_w7qjsmk',

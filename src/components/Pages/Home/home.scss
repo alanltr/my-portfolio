@@ -19,7 +19,7 @@
     margin-left: 20px; // correction du decalage naturel du svg
   }
   .home-title {
-    font: 60px 'Rajdhani';
+    font: 60px vars.$rajdhani;
     grid-area: title;
     place-self: center;
     font-size: 60px;
@@ -48,7 +48,7 @@
     grid-area: container;
     place-self: center;
     padding-right: 25vw;
-    margin-top: 17%;
+    margin-top: 13%;
     user-select: none;
     .under-767px-display {
       display: none;
@@ -99,8 +99,7 @@
       
       .pop-title {
         color: white;
-        font: 25px 'Rajdhani';
-        font-weight: bold;
+        font: 25px vars.$rajdhani;
         width: 280px;
         height: 50px;
         border-top-left-radius: 20px;
@@ -143,7 +142,7 @@
 
         .pop-close {
           user-select: none;
-          font: 30px 'Rajdhani';
+          font: 30px vars.$rajdhani;
           font-weight: bold;
           color: red;
           display: inline;
@@ -245,7 +244,7 @@
       width: 70%;
       margin-top: 4em;
       .under-767px-display {
-        font: 40px 'Rajdhani';
+        font: 40px vars.$rajdhani;
         display: block;
         span {
           font-size: 75%;

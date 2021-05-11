@@ -1,3 +1,5 @@
+@use 'src/styles/vars';
+
 $mainColor: wheat;
 
 .modal-component {
@@ -6,7 +8,7 @@ $mainColor: wheat;
   color: white;
   border-radius: 20px;
   padding: 1em 2em;
-  font-family: 'Rajdhani';
+  font-family: vars.$rajdhani;
   color: $mainColor;
   outline: none;
 
@@ -43,12 +45,12 @@ $mainColor: wheat;
 
     label {
       color: $mainColor;
-      font-family: 'Rajdhani';
+      font-family: vars.$rajdhani;
     }
     input, textarea {
       color: white;
       font-weight: bold;
-      font-family: 'Rajdhani';
+      font-family: vars.$rajdhani;
       letter-spacing: 2px;
       border-radius: 10px;
       &::after {
@@ -70,7 +72,7 @@ $mainColor: wheat;
       overflow: hidden;
 
       button {
-        font: 30px 'Rajdhani';
+        font: 30px vars.$rajdhani;
         color: $mainColor;
         place-self: center;
         width: 100%;

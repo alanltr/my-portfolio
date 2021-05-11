@@ -1,8 +1,4 @@
 $total-lines: 7;
-/*
-** Leave these unless you want
-** to open a whole can of worms
-*/
 $left-offset: 35px;
 $clip-height: 60px;
 $line-height: $clip-height - 5px;
@@ -17,10 +13,6 @@ $line-height: $clip-height - 5px;
   text-transform: uppercase;
   transform: translate3d(0, 0, 0);
 
-  
-  /*
-  ** Apply common styles to each line of text
-  */
   .words-line {
     height: $clip-height;
     width: 100%;
@@ -48,11 +40,7 @@ $line-height: $clip-height - 5px;
       font-size: 75%;
     }
   }
-  
-  
-  /*
-  ** Fine-grained text styles
-  */
+
   p {
     height: $clip-height;
     line-height: $line-height;
@@ -63,10 +51,6 @@ $line-height: $clip-height - 5px;
     white-space: nowrap;
   }
   
-  
-  /*
-  ** The hover interaction
-  */
   &:hover {
     p {
       transform: translate3d(0, -($clip-height), 0);

@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 $mainColor: rgb(255, 255, 255);
-$btnBackground: #00001b;
+$btnBackground: #020325;
 $pulseWidth: 0.8em;
 $borderWidth: 3px;
 
@@ -66,7 +66,7 @@ $borderWidth: 3px;
       height: 100%;
       margin: 0;
       font-weight: bold;
-      font: 150% 'Rajdhani';
+      font: 150% vars.$rajdhani;
       text-transform: uppercase;
 
       @include button($btnBackground, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",

@@ -1,5 +1,7 @@
+@use 'src/styles/vars';
 
-$depth: 6rem;
+$depth: 4rem;
+
 .content-container {
   position: relative;
 
@@ -37,6 +39,7 @@ $depth: 6rem;
   }
   
   .slideContent {
+    cursor: pointer;
     border-radius: 10px;
     width: 60vw;
     height: 70vh;
@@ -52,7 +55,7 @@ $depth: 6rem;
   }
 
   .slideContentInner {
-    font-family: 'Rajdhani';
+    font-family: vars.$rajdhani;
     transform-style: preserve-3d;
     transition: opacity 0.3s linear;
     opacity: 0;
@@ -60,24 +63,18 @@ $depth: 6rem;
     .slideTitle {
       font-size: 10vw;
       transform: translateZ($depth);
-      font-family: 'Rajdhani';
+      font-family: vars.$rajdhani;
       font-weight: bold;
-      letter-spacing: 0.2ch;
+      padding: .1em;
+      letter-spacing: 0.1ch;
       text-transform: capitalize;
       margin: 0;
       color: rgb(0, 0, 0);
-      
-      animation: shineWord 3s infinite linear;
-      background: linear-gradient(to right, #000000 0, white 10%, #000000 20%);
-      background-position: 0;
 
-      text-decoration: none;
-      white-space: nowrap;
-      background-position: 0;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation-fill-mode: forwards;
-      -webkit-text-size-adjust: none;
+      display: inline-block;
+
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: vars.$neonColor;
     }
   }
 
@@ -103,11 +100,4 @@ $depth: 6rem;
       }
     }
   }
-
-  @keyframes shineWord {
-    0% { background-position: 0%} 
-    // 60% {background-position: -100%}
-    100% {background-position: 55vw}
-  }
-
 }

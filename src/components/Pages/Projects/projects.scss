@@ -27,3 +27,35 @@
     grid-area: content;
   }
 }
+
+// Tablette
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+  .projects-component {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+      " . title backlink "
+      " content content content "
+    ;
+    
+    // Titre
+    .neon {
+      h1.neon-item {
+        font-size: 3.5em;
+      }
+    }
+
+    .content-container {
+      .slides {
+        .slide {
+          .slide-content {
+            width: 65vw;
+          }
+        }
+        button {
+          font-size: 25vw;
+        }
+      }
+    }
+  }
+}
