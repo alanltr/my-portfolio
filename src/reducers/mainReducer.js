@@ -10,6 +10,9 @@ import {
 import {
   PREVIOUS_ITEM,
   NEXT_ITEM,
+  TOGGLE_IS_OPEN_MODAL_PROJECTS,
+  PREVIOUS_LITTLE_ITEM,
+  NEXT_LITTLE_ITEM,
 } from 'src/actions/projectsActions';
 
 const initialState = {
@@ -28,6 +31,10 @@ const initialState = {
   slides,
   nbOfProject: slides.length,
   slideIndex: 0,
+  // Modal Projects
+  isOpenModalProjects: true,
+  littleSlideIndex: 0,
+  nbOfLittleSlide: 3,
 };
 
 function homeReducer(state = initialState, action = {}) {
@@ -41,6 +48,11 @@ function homeReducer(state = initialState, action = {}) {
       return {
         ...state,
         isOpenModalMail: !state.isOpenModalMail,
+      };
+    case TOGGLE_IS_OPEN_MODAL_PROJECTS:
+      return {
+        ...state,
+        isOpenModalProjects: !state.isOpenModalProjects,
       };
     case TOGGLE_IS_OPEN_SNACKBAR:
       return {
@@ -62,15 +74,26 @@ function homeReducer(state = initialState, action = {}) {
         ...state,
         successMessage: action.newValue,
       };
-    case PREVIOUS_ITEM:
+    case NEXT_ITEM:
       return {
         ...state,
         slideIndex: (state.slideIndex + 1) % state.slides.length,
       };
-    case NEXT_ITEM:
+    case PREVIOUS_ITEM:
       return {
         ...state,
         slideIndex: state.slideIndex === 0 ? state.slides.length - 1 : state.slideIndex - 1,
+      };
+    case NEXT_LITTLE_ITEM:
+      return {
+        ...state,
+        littleSlideIndex: (state.littleSlideIndex + 1) % state.nbOfLittleSlide,
+      };
+    case PREVIOUS_LITTLE_ITEM:
+      return {
+        ...state,
+        // eslint-disable-next-line max-len
+        littleSlideIndex: state.littleSlideIndex === 0 ? state.nbOfLittleSlide - 1 : state.littleSlideIndex - 1,
       };
     default:
       return state;

@@ -74,7 +74,7 @@ $depth: 4rem;
       display: inline-block;
 
       -webkit-text-stroke: 2px;
-      -webkit-text-stroke-color: vars.$neonColor;
+      -webkit-text-stroke-color: #a9a9a9;
     }
   }
 
@@ -97,6 +97,270 @@ $depth: 4rem;
         transition: none;
         transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
           rotateX(calc(var(--y) * -45deg));
+      }
+    }
+  }
+}
+
+.projects-modal-component {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 15% 25% 20% 40%;
+  grid-template-areas:
+    "title title"
+    "description description"
+    "infos carousel"
+    "techno carousel"  
+  ;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  color: white;
+  border-radius: 0px;
+  padding: 1em 2em;
+  font-family: vars.$rajdhani;
+  outline: none;
+  text-align: center;
+  .close-cross {
+    position: absolute;
+    font-weight: bold;
+    transform: rotate(45deg);
+    right: 20px;
+    top: 20px;
+    font-size: 6vw;
+    cursor: pointer;
+    transition: 1s;
+    animation: shine 2s forwards, blinker linear infinite 4s;
+    line-height: 2vw;
+    z-index: 2;
+  }
+  h2 {
+    grid-area: title;
+    font-size: 9vw;
+    font-family: vars.$rajdhani;
+    text-transform: capitalize;
+    margin: auto;
+  }
+  #projects-modal-description {
+    grid-area: description;
+    font-size: 2.5vw;
+    margin: auto;
+    font-style: italic;
+  }
+
+  .project-technologies {
+    grid-area: techno;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% auto;
+    grid-template-areas: 
+    "title title"
+    "front back"
+    ;
+    .front-tech,
+    .back-tech {
+      color: black;
+      font-size: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 15px;
+
+      img {
+        width: 80px;
+      }
+    }
+    .front-tech {
+      grid-area: front;
+    }
+
+    .back-tech {
+      grid-area: back;
+    }
+    .title-tech {
+      grid-area: title;
+      font-size: 3.5vw;
+      font-family: vars.$rajdhani;
+    }
+  }
+
+  .project-infos {
+    grid-area: infos;
+    place-self: center;
+    font-size: 2vw;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .project-carousel {
+    grid-area: carousel;
+    
+  }
+  .slides {
+    padding: 1em 0;
+    display: grid;
+    overflow: hidden;
+    justify-items: stretch;
+    position: relative;
+    > .slide {
+      grid-area: 1 / -1;
+    }
+
+    > button {
+      appearance: none;
+      background: transparent;
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: rgb(0, 0, 0);
+      border: none;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      font-size: 12vw;
+      width: 5rem;
+      opacity: 0.6;
+      top: 30%;
+      transition: opacity 0.3s;
+      z-index: 5;
+
+      &:hover {
+        opacity: 1;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:last-child {
+        right: 0;
+      }
+    }
+  }
+  
+  .slideContent {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) translateX(calc(100% * var(--offset)))
+      rotateY(calc(-45deg * var(--dir)));
+    position: relative;
+
+      .slideContentInner {
+        position: absolute;
+        right: 5em;
+        top: 1em;
+        font-family: vars.$rajdhani;
+        transform-style: preserve-3d;
+    
+        .slideTitle {
+          font-size: 5vw;
+          transform: translateZ($depth);
+          font-family: vars.$rajdhani;
+          font-weight: bold;
+          letter-spacing: 0.1ch;
+          text-transform: capitalize;
+          color: rgb(0, 0, 0);
+    
+          display: inline-block;
+    
+          -webkit-text-stroke: 2px;
+          -webkit-text-stroke-color: #a9a9a9;
+        }
+      }
+  }
+
+
+  .slide[data-active] {
+    z-index: 2;
+    pointer-events: auto;
+
+    .slideContentInner {
+      opacity: 1;
+    }
+
+    .slideContent {
+      --x: calc(var(--px) - 0.5);
+      --y: calc(var(--py) - 0.5);
+      opacity: 1;
+
+      transform: perspective(1000px);
+
+      &:hover {
+        transition: none;
+        transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
+          rotateX(calc(var(--y) * -45deg));
+      }
+    }
+  }
+}
+// Mini Pc
+@media only screen and (min-width : 768px) and (max-width : 1050px) {
+  .projects-modal-component {
+    #projects-modal-title {
+      font-size: 12vw;
+    }
+    #projects-modal-description {
+      font-size: 3.5vw;
+    }
+    .project-infos {
+      font-size: 2.5vw;
+    }
+    .project-carousel {
+      .slide {
+        .slideContent {
+          .slideContentInner {
+            .slideTitle {
+              -webkit-text-stroke: 1.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablette
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+  .projects-modal-component {
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 12% 22% 23% 43%;
+    grid-template-areas:
+      "title title"
+      "description description"
+      "infos techno"
+      "carousel carousel"  
+    ;
+    #projects-modal-title {
+      font-size: 14vw;
+    }
+    #projects-modal-description {
+      font-size: 4vw;
+    }
+    .project-infos {
+      font-size: 3.5vw;
+    }
+    .project-technologies {
+      display: flex;
+      flex-direction: column;
+      .back-tech,
+      .front-tech {
+        flex-direction: row;
+        img {
+          width: 9vw;
+        }
+      }
+    }
+    .project-carousel {
+      .slide {
+        .slideContent {
+          .slideContentInner {
+            .slideTitle {
+              -webkit-text-stroke: 1px;
+            }
+          }
+        }
       }
     }
   }

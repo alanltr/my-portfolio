@@ -46,31 +46,41 @@ function useTilt(active) {
   return ref;
 }
 
-const Slide = ({ image, title, offset }) => {
+const Slide = ({
+  image,
+  title,
+  offset,
+  toggleIsOpenModalProjects,
+}) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
 
+  // console.log(image)
+
   return (
-    <div
-      ref={ref}
-      className="slide"
-      data-active={active}
-      style={{
-        '--offset': offset,
-        '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1,
-      }}
-    >
+    <>
       <div
-        className="slideContent"
+        ref={ref}
+        className="slide"
+        data-active={active}
         style={{
-          backgroundImage: `url('${image}')`,
+          '--offset': offset,
+          '--dir': offset === 0 ? 0 : offset > 0 ? 1 : -1,
         }}
+        onClick={toggleIsOpenModalProjects}
       >
-        <div className="slideContentInner">
-          <h2 className="slideTitle">{title}</h2>
+        <div
+          className="slideContent"
+          style={{
+            backgroundImage: `url('${image}')`,
+          }}
+        >
+          <div className="slideContentInner">
+            <h2 className="slideTitle">{title}</h2>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
