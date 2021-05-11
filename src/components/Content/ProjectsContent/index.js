@@ -21,8 +21,8 @@ const ProjectsContent = ({
 }) => {
   // On récupère la current slide pour la modal
   const currentSlide = slides.find((item, i) => i === slideIndex);
-  const carousel = currentSlide.carousel;
-  const slideIndex1 = 0;
+  // On stocke les images du carousel pour la modal
+  const { carousel } = currentSlide;
 
   const body = (
     <div className="projects-modal-component glassmorphism">
@@ -60,7 +60,6 @@ const ProjectsContent = ({
       <div className="project-carousel slides">
         <button
           type="button"
-          className=""
           onClick={previousLittleItem}
         >‹
         </button>
@@ -76,7 +75,6 @@ const ProjectsContent = ({
         })}
         <button
           type="button"
-          className=""
           onClick={nextLittleItem}
         >›
         </button>
@@ -101,7 +99,6 @@ const ProjectsContent = ({
       </Modal>
       {[...slides, ...slides, ...slides].map((slide, i) => {
         const offset = slides.length + (slideIndex - i);
-        // {console.log(slide)}
         return (
           <Slide
             {...slide}
@@ -129,6 +126,9 @@ ProjectsContent.propTypes = {
   slides: PropTypes.array.isRequired,
   isOpenModalProjects: PropTypes.bool.isRequired,
   toggleIsOpenModalProjects: PropTypes.func.isRequired,
+  nextLittleItem: PropTypes.func.isRequired,
+  previousLittleItem: PropTypes.func.isRequired,
+  littleSlideIndex: PropTypes.number.isRequired,
 };
 
 // == Export

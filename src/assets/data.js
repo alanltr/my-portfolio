@@ -32,7 +32,7 @@ export default [
   },
   {
     title: 'My Portfolio',
-    description: 'The project you are currently on. I developed it with React & Redux, most of animations are made with only Css until for the smoky background whiwh was made by hand with ThreeJs',
+    description: 'The project you are currently on. I developed it with React & Redux, most of animations are made with only Css until for the smoky background which was made by hand with ThreeJs',
     infos: 'The recipe ? A slice of react, a lot of Css and we season with Threejs',
     front: [reactLogo, reduxLogo, threejsLogo],
     back: [''],

@@ -249,7 +249,7 @@ $depth: 4rem;
 
       .slideContentInner {
         position: absolute;
-        right: 5em;
+        right: 8em;
         top: 1em;
         font-family: vars.$rajdhani;
         transform-style: preserve-3d;
@@ -313,6 +313,7 @@ $depth: 4rem;
           .slideContentInner {
             .slideTitle {
               -webkit-text-stroke: 1.5px;
+              -webkit-text-stroke-color: #a9a9a9;
             }
           }
         }
@@ -358,6 +359,7 @@ $depth: 4rem;
           .slideContentInner {
             .slideTitle {
               -webkit-text-stroke: 1px;
+              -webkit-text-stroke-color: #a9a9a9;
             }
           }
         }

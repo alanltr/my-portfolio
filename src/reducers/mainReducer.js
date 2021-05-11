@@ -29,10 +29,9 @@ const initialState = {
   isOpenSnackbar: false,
   // ProjectsContent | Slides
   slides,
-  nbOfProject: slides.length,
   slideIndex: 0,
   // Modal Projects
-  isOpenModalProjects: true,
+  isOpenModalProjects: false,
   littleSlideIndex: 0,
   nbOfLittleSlide: 3,
 };
