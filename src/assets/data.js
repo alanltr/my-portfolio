@@ -6,6 +6,9 @@ import symfonyLogo from 'src/assets/logos/symfony.png';
 import threejsLogo from 'src/assets/logos/threejs.png';
 import reduxLogo from 'src/assets/logos/redux.png';
 import mysqlLogo from 'src/assets/logos/mysql.png';
+import backadmin from 'src/assets/projects/lineup/back-admin.png';
+import backresto from 'src/assets/projects/lineup/back-resto.png';
+import home from 'src/assets/projects/lineup/home.png';
 
 export default [
   {
@@ -17,16 +20,16 @@ export default [
     image: lineUpImageHome,
     carousel: [
       {
-        title: 'Description1',
-        image: portfolioImageHome,
+        title: 'Home',
+        image: home,
       },
       {
-        title: 'Description2',
-        image: gifUnderContruction,
+        title: 'Restaurant Back Office',
+        image: backresto,
       },
       {
-        title: 'Description3',
-        image: gifUnderContruction,
+        title: 'Admin Back Office',
+        image: backadmin,
       },
     ],
   },
