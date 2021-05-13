@@ -159,5 +159,39 @@
       }
     }
   }
+}
+// Phone
+@media only screen and (max-width : 479px) {
+  .social-media-component {
+    ul {
+      li {
+        margin:0 18px; // écart entre les tuiles
+        
+        a {
+          padding-left: 7px;
+          width: 40px;
+          height: 35px;
 
+          &::after {
+            bottom: -15px;
+            left: -7px;
+            height: 15px;
+          }
+          &::before {
+            top: 8px;
+            left: -15px;
+            width: 15px;
+          }
+
+          svg {
+            font-size: 30px;
+            margin-top: 2px;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
