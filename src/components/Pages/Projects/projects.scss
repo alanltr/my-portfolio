@@ -48,12 +48,44 @@
     .content-container {
       .slides {
         .slide {
-          .slide-content {
+          .slideContent {
             width: 65vw;
           }
         }
         button {
           font-size: 25vw;
+        }
+      }
+    }
+  }
+}
+
+// Phone
+@media only screen and (max-width : 479px) {
+  .projects-component {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+      " title title backlink "
+      " content content content "
+    ;
+    
+    // Titre
+    .neon {
+      h1.neon-item {
+        font-size: 3.5em;
+      }
+    }
+
+    .content-container {
+      .slides {
+        .slide {
+          .slideContent {
+            width: 75vw;
+          }
+        }
+        button {
+          font-size: 30vw;
         }
       }
     }
