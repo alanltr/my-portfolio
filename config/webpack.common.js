@@ -10,7 +10,6 @@ module.exports = {
     // JS
     paths.src + '/index.js',
   ],
-
   resolve: {
     alias: {
       src: paths.src,
