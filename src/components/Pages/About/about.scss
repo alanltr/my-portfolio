@@ -189,3 +189,97 @@
   }
 }
 
+// Phone
+@media only screen and (max-width : 479px) {
+  .about-component {
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 30% 60%;
+    grid-template-areas: 
+      " backlink title title "
+      " prez prez prez "
+      " content content content "
+    ;
+    
+    // Titre
+    .neon {
+      h1.neon-item {
+        font-size: 12vw;
+      }
+    }
+
+    .about-presentation {
+      margin: .5em;
+      font-size: 4vw;
+    }
+
+    .about-content {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+        " left"
+        "right"
+        "bottom"
+      ;
+      padding: 1em;
+    }
+    .left-section-title {
+      height: 5vh;
+      border-radius: 10px;
+      top: 0;
+      width: 30vw;
+      font-size: 4vw;
+    }
+    .left-section {    
+      grid-template-columns: 40% 60%;
+      grid-template-rows: 80% 20%;
+      grid-template-areas:
+        " content content "
+        " download . "
+      ;
+      padding: 2em .5em 1 .5em;
+      .left-section-content {
+        font-size: 15px;
+        .left-wrapper{
+          margin-bottom: 1em;
+          .left {
+            margin-left: 0px;
+            font-size: 12px;
+            padding-top: -28px;
+          }
+          .right {
+            font-size: 16px;
+            margin-top: 6px;
+          }
+        }
+      }
+      .download-btn {
+        margin-bottom: 50px;
+      }
+    }
+    .right-section {
+      grid-template-columns: 33% 34% 33%;
+      grid-template-rows: 45% 10% 45%;
+      grid-template-areas: 
+      " html css js"
+        " . . . "
+        " react redux sass"
+      ;
+      margin: 1em;
+      img {
+        width: 60px !important;
+      }
+    }
+
+    
+    .bottom-section {
+      height: 80px;
+      margin-bottom: 200px;
+      margin-left: 0vw;
+      img {
+        width: 60px !important;
+      }
+    }
+  }
+}
