@@ -24,6 +24,10 @@ const Home = ({
   isOpenModalMail,
   toggleIsOpenModalMail,
 }) => {
+  React.useEffect(() => {
+    document.title = 'My Porfolio';
+  });
+
   const popDivClassname = classNames('pop-content', { close: !isOpenSocialMedia });
   const popTitleClassname = classNames('pop-title', { close: isOpenSocialMedia });
 
