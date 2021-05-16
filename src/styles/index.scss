@@ -76,17 +76,17 @@ $gray: #333;
     text-shadow: none;
   }
   100% {
-    color: vars.$neonColor;
-    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 25%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
-      -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+    color: var(--neonColoring);
+    text-shadow: 0 0 0.6rem var(--color-primary-darkest), 0 0 1.5rem var(--color-primary-light),
+      -0.2rem 0.1rem 1rem var(--color-primary-lightest);
   }
 }
 
 @keyframes blinker {
   78% {
-    color: vars.$neonColor;
-    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
-    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+    color: var(--neonColoring);
+    text-shadow: 0 0 0.6rem var(--color-primary-darkest), 0 0 1.5rem var(--color-primary-light),
+      -0.2rem 0.1rem 1rem var(--color-primary-lightest);
   }
   79%{
      color: $gray;
@@ -95,27 +95,27 @@ $gray: #333;
     text-shadow: none;
   }
   81% {
-    color: vars.$neonColor;
-    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
-    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+    color: var(--neonColoring);
+    text-shadow: 0 0 0.6rem var(--color-primary-darkest), 0 0 1.5rem var(--color-primary-light),
+      -0.2rem 0.1rem 1rem var(--color-primary-lightest);
   }
   82% {
     color: $gray;
     text-shadow: none;
   }
   83% {
-    color: vars.$neonColor;
-    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
-    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+    color: var(--neonColoring);
+    text-shadow: 0 0 0.6rem var(--color-primary-darkest), 0 0 1.5rem var(--color-primary-light),
+      -0.2rem 0.1rem 1rem var(--color-primary-lightest);
   }
   92% {
     color: $gray;
     text-shadow: none;
   }
   92.5% {
-    color: vars.$neonColor;
-    text-shadow: 0 0 0.6rem darken(vars.$neonColor, 1%), 0 0 1.5rem lighten(vars.$neonColor, 15%),
-    -0.2rem 0.1rem 1rem lighten(vars.$neonColor, 35%);
+    color: var(--neonColoring);
+    text-shadow: 0 0 0.6rem var(--color-primary-darkest), 0 0 1.5rem var(--color-primary-light),
+      -0.2rem 0.1rem 1rem var(--color-primary-lightest);
   }
 }
 

@@ -35,7 +35,7 @@ const Home = ({
       transition={{ duration: 0.5 }}
     >
       <div className="home-component">
-        {/* <ColorPalette /> */}
+        <ColorPalette />
         <NavButton
           navLink="/projects"
           styleClass="projects-link"

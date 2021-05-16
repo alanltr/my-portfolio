@@ -7,9 +7,14 @@
 // Fonts
 $rajdhani: 'Rajdhani', sans-serif;
 
-// Néons
-$neonColor: rgb(255, 131, 238);
-
 :root {
-  --neonColoring: rgb(255, 131, 238);
+  --neonColoring: rgb(17, 255, 0);
+
+  --color: 116, 100%; /*the base color*/
+  --l:50%; /*the initial lightness*/
+  
+  --color-primary: hsl(var(--color),var(--l));
+  --color-primary-darkest: hsl(var(--color),calc(var(--l) - 25%)); 
+  --color-primary-light: hsl(var(--color),calc(var(--l) + 15%));
+  --color-primary-lightest: hsl(var(--color),calc(var(--l) + 35%));
 }

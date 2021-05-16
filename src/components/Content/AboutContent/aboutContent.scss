@@ -76,7 +76,7 @@
         justify-content: space-between;
         .left {
           width: 30%;
-          color: vars.$neonColor;
+          color: var(--neonColoring);
           font-size: 16px;
           font-style: italic;
           margin-bottom: -40px;
