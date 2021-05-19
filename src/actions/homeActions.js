@@ -34,6 +34,7 @@ export const setSuccessMessage = (newValue) => ({
   newValue,
 });
 
-export const toggleIsOpenSnackbar = () => ({
+export const toggleIsOpenSnackbar = (bool) => ({
   type: TOGGLE_IS_OPEN_SNACKBAR,
+  bool,
 });

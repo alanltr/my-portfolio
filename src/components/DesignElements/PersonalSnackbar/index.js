@@ -23,7 +23,7 @@ const PersonalSnackbar = ({
       return;
     }
 
-    toggleIsOpenSnackbar();
+    toggleIsOpenSnackbar(false);
   };
 
   return (
