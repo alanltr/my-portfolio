@@ -31,8 +31,8 @@ const authMiddleware = (store) => (next) => (action) => {
         next(action);
         break;
       }
-      else if (mailObject.length > 80) {
-        store.dispatch(setSuccessMessage('Your subject is too long. Maximum 80chars allowed'));
+      else if (mailObject.length > 50) {
+        store.dispatch(setSuccessMessage('Your subject is too long. Maximum 50chars allowed'));
         store.dispatch(setIsASuccess(false));
         store.dispatch(toggleIsOpenSnackbar(true));
 
@@ -49,8 +49,8 @@ const authMiddleware = (store) => (next) => (action) => {
         next(action);
         break;
       }
-      else if (mailContent.length > 250) {
-        store.dispatch(setSuccessMessage('Your mail content is too long. Maximum 250chars allowed'));
+      else if (mailContent.length > 300) {
+        store.dispatch(setSuccessMessage('Your mail content is too long. Maximum 300chars allowed'));
         store.dispatch(setIsASuccess(false));
         store.dispatch(toggleIsOpenSnackbar(true));
 
