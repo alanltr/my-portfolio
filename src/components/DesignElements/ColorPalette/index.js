@@ -60,7 +60,11 @@ const ColorPalette = () => {
 
   return (
     <div className="color-changer-container">
+      <label htmlFor="color-changer">
+        Change Me
+      </label>
       <input
+        id="color-changer"
         onChange={handleColor}
         type="color"
         value={colorToDisplay}
