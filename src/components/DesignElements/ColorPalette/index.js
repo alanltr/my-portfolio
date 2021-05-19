@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // == Composant
-const ColorPalette = () => {
+const ColorPalette = ({ colorToDisplay, setColorToDisplay}) => {
   const toHSL = (hex) => {
     // @see https://stackoverflow.com/questions/62390243/java-script-how-can-i-pull-the-hsl-value-when-a-colour-is-selected-from-input-t
 
@@ -50,12 +50,12 @@ const ColorPalette = () => {
     return `${h}, 100%`;
   };
 
-  const [colorToDisplay, setColor] = useState('#11ff00');
+  // const [colorToDisplay, setColor] = useState('#11ff00');
 
   const handleColor = (e) => {
     document.documentElement.style.setProperty('--color', toHSL(e.target.value));
     document.documentElement.style.setProperty('--neonColoring', e.target.value);
-    setColor(e.target.value);
+    setColorToDisplay(e.target.value);
   };
 
   return (

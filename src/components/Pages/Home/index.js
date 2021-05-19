@@ -10,9 +10,9 @@ import NavButton from 'src/components/DesignElements/NavButton';
 import NeonAlone from 'src/components/DesignElements/NeonAlone';
 import SocialMedia from 'src/components/Content/SocialMedia';
 import LittleArrows from 'src/components/DesignElements/LittleArrows';
-import ColorPalette from 'src/components/DesignElements/ColorPalette';
 import MailModal from 'src/containers/MailModal';
 import PersonalSnackbar from 'src/containers/PersonalSnackbar';
+import ColorPalette from 'src/containers/ColorPalette';
 
 // == Import
 import './home.scss';

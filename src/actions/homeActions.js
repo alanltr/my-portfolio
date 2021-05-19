@@ -5,6 +5,7 @@ export const SEND_EMAIL = 'SEND_EMAIL';
 export const SET_IS_A_SUCCESS = 'SET_IS_A_SUCCESS';
 export const SET_SUCCESS_MESSAGE = 'SET_SUCCESS_MESSAGE';
 export const TOGGLE_IS_OPEN_SNACKBAR = 'TOGGLE_IS_OPEN_SNACKBAR';
+export const SET_COLOR_TO_DISPLAY = 'SET_COLOR_TO_DISPLAY';
 
 export const sendEmail = () => ({
   type: SEND_EMAIL,
@@ -37,4 +38,9 @@ export const setSuccessMessage = (newValue) => ({
 export const toggleIsOpenSnackbar = (bool) => ({
   type: TOGGLE_IS_OPEN_SNACKBAR,
   bool,
+});
+
+export const setColorToDisplay = (color) => ({
+  type: SET_COLOR_TO_DISPLAY,
+  color,
 });

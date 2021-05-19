@@ -6,6 +6,7 @@ import {
   SET_IS_A_SUCCESS,
   SET_SUCCESS_MESSAGE,
   TOGGLE_IS_OPEN_SNACKBAR,
+  SET_COLOR_TO_DISPLAY,
 } from 'src/actions/homeActions';
 import {
   PREVIOUS_ITEM,
@@ -34,10 +35,17 @@ const initialState = {
   isOpenModalProjects: false,
   littleSlideIndex: 0,
   nbOfLittleSlide: 3,
+  // ColorPalette
+  colorToDisplay: '#11ff00',
 };
 
 function homeReducer(state = initialState, action = {}) {
   switch (action.type) {
+    case SET_COLOR_TO_DISPLAY:
+      return {
+        ...state,
+        colorToDisplay: action.color,
+      };
     case TOGGLE_IS_OPEN_SOCIAL_MEDIA:
       return {
         ...state,
