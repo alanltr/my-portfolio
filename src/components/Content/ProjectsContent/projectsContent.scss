@@ -368,6 +368,7 @@ $depth: 4rem;
   }
 }
 
+// PHONE
 @media only screen and (max-width : 479px) {
   .projects-modal-component {
     grid-template-columns: 30% 70%;
@@ -378,6 +379,7 @@ $depth: 4rem;
       "infos infos"
       "techno techno"
       "carousel carousel"  
+      " . . "
     ;
     padding: 1em;
     overflow-y: auto;

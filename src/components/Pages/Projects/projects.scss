@@ -85,7 +85,21 @@
           }
         }
         button {
-          font-size: 30vw;
+          font-size: 12em;
+          position: none;
+          &:last-child {
+            right: -30%;
+          }
+          &:first-child {
+            left: -30%;
+          }
+          &:last-child,
+          &:first-child {
+            z-index: 5;
+            top: 55%;
+            width: auto;
+            height: auto;
+          }
         }
       }
     }
