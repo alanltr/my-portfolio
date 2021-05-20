@@ -147,20 +147,14 @@
           color: red;
           display: inline;
           position: absolute;
-          right: 0%;
-          top: 0%;
+          right: -7px;
+          top: 5px;
           width: 45px;
           height: 25px;
-          border-bottom-left-radius: 20px;
-          border-left: 1px groove rgba(255,255,255,0.2);
-          border-bottom: 1px groove rgba(255,255,255,0.2);
           cursor: pointer;
-
-          &:active {
-            background-color: #800000;
+          transition: .5s;
+          &:hover {
             color: white;
-            box-shadow: inset 8px 8px 10px #740000,
-            inset -8px -8px 10px #8c0000;
           }
 
           div {
@@ -416,7 +410,7 @@
         }
 
         .pop-content {
-          height: 130px;
+          height: 110px;
           .social-media-component {
             margin-top: 50px;
           }
