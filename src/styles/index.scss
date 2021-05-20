@@ -77,10 +77,8 @@ canvas {
   z-index: 2;
 }
 @supports not (backdrop-filter: none) {
-  .glassmorphism,
-  .glassmorphism-1 {
-    background: linear-gradient(to bottom right, rgba(110, 110, 110, 0.801), rgba(255, 255, 255, 0.664));
-
+  .glassmorphism {
+    background: linear-gradient(to bottom right,hsl(0, 0%, 34.9%),hsla(0, 0%, 61.6%, 0.92));
   }
 }
 

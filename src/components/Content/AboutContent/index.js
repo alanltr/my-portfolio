@@ -21,7 +21,7 @@ import './aboutContent.scss';
 const AboutContent = () => (
   <>
     <h2 className="left-section-title glassmorphism-1 neon-item">My curriculum</h2>
-    <div className="left-section glassmorphism">
+    <div className="left-section glassmorphism-1">
       <div className="left-section-content">
         Coming from a literary baccalaureate, after having
         had a lot of work in particular as manager of several
@@ -43,7 +43,7 @@ const AboutContent = () => (
         <DownloadBtn />
       </div>
     </div>
-    <div className="bottom-section glassmorphism">
+    <div className="bottom-section glassmorphism-1">
       <div className="logo-display logo-display-8">
         <img src={nodejsLogo} alt="logo node js" />
       </div>
