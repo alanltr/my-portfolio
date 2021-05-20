@@ -13,7 +13,8 @@ const HomeContent = () => (
       Welcome to my portfolio.<br />
       Enjoy your visit 🔥.<br />
       <span>
-        To make the most of the site, come and see it with a slightly larger screen.
+        To make the most of the site and its features,
+        come back to see it with a slightly larger screen.
       </span>
     </div>
     <ul className="words">
