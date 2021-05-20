@@ -26,6 +26,12 @@ function useTilt(active) {
       }
       if (!state.rect) {
         state.rect = el.getBoundingClientRect();
+
+        // Pour corriger le bug, on verifie que la valeur x n'est jamais negative
+        // Si elle l'est on la met en positif
+        if (state.rect.x < 0) {
+          state.rect.x *= -1;
+        }
       }
       state.mouseX = e.clientX;
       state.mouseY = e.clientY;
@@ -37,10 +43,6 @@ function useTilt(active) {
     };
 
     el.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      el.removeEventListener('mousemove', handleMouseMove);
-    };
   }, [active]);
 
   return ref;
