@@ -24,6 +24,19 @@ const ProjectsContent = ({
   // On stocke les images du carousel pour la modal
   const { carousel } = currentSlide;
 
+  // Controle du grand carousel lors du scroll
+  const handleScroll = (e) => {
+    if (isOpenModalProjects) {
+      return;
+    }
+    if (e.deltaY < 0) {
+      previousItem();
+    }
+    else {
+      nextItem();
+    }
+  };
+
   const body = (
     <div className="projects-modal-component glassmorphism">
       <div className="close-cross neon-item" onClick={toggleIsOpenModalProjects}>+</div>
@@ -83,7 +96,7 @@ const ProjectsContent = ({
   );
 
   return (
-    <>
+    <div className="content-container" onWheel={handleScroll}>
       <div className="button-container">
         <button
           type="button"
@@ -119,7 +132,7 @@ const ProjectsContent = ({
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

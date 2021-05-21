@@ -30,9 +30,9 @@ const Projects = () => {
         <div className="projects-backlink common-backlink">
           <Backlink />
         </div>
-        <div className="content-container">
+        <>
           <ProjectsContent />
-        </div>
+        </>
       </div>
     </motion.div>
   );
