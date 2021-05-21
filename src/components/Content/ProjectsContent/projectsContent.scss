@@ -12,30 +12,6 @@ $depth: 4rem;
     > .slide {
       grid-area: 1 / -1;
     }
-
-    > button {
-      appearance: none;
-      background: transparent;
-      border: none;
-      color: rgb(255, 255, 255);
-      position: absolute;
-      font-size: 12vw;
-      width: 5rem;
-      height: 5rem;
-      top: 30%;
-      transition: opacity 0.3s;
-      z-index: 5;
-
-      &:hover {
-        opacity: 1;
-      }
-      &:focus {
-        outline: none;
-      }
-      &:last-child {
-        right: 0;
-      }
-    }
   }
   
   .slideContent {

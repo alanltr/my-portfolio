@@ -83,39 +83,43 @@ const ProjectsContent = ({
   );
 
   return (
-    <div className="slides">
-      <button
-        type="button"
-        className="neon-item flicker"
-        onClick={previousItem}
-      >‹
-      </button>
-      <Modal
-        open={isOpenModalProjects}
-        onClose={toggleIsOpenModalProjects}
-        aria-labelledby="project-modal"
-      >
-        {body}
-      </Modal>
-      {[...slides, ...slides, ...slides].map((slide, i) => {
-        const offset = slides.length + (slideIndex - i);
-        return (
-          <Slide
-            {...slide}
-            offset={offset}
-            key={i}
-            isOpenModalProjects={isOpenModalProjects}
-            toggleIsOpenModalProjects={toggleIsOpenModalProjects}
-          />
-        );
-      })}
-      <button
-        type="button"
-        className="neon-item fast-flicker"
-        onClick={nextItem}
-      >›
-      </button>
-    </div>
+    <>
+      <div className="button-container">
+        <button
+          type="button"
+          className="neon-item flicker"
+          onClick={previousItem}
+        >‹
+        </button>
+        <button
+          type="button"
+          className="neon-item fast-flicker"
+          onClick={nextItem}
+        >›
+        </button>
+      </div>
+      <div className="slides">
+        <Modal
+          open={isOpenModalProjects}
+          onClose={toggleIsOpenModalProjects}
+          aria-labelledby="project-modal"
+        >
+          {body}
+        </Modal>
+        {[...slides, ...slides, ...slides].map((slide, i) => {
+          const offset = slides.length + (slideIndex - i);
+          return (
+            <Slide
+              {...slide}
+              offset={offset}
+              key={i}
+              isOpenModalProjects={isOpenModalProjects}
+              toggleIsOpenModalProjects={toggleIsOpenModalProjects}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

@@ -25,6 +25,33 @@
 
   .content-container {
     grid-area: content;
+    display: flex;
+    flex-direction: column;
+  }
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    button {
+      z-index: 5;
+      background: none;
+      border: none;
+      font-size: 18vw;
+      margin: 0 1em;
+    }
+  }
+}
+
+// All excepts phones & tablettes
+@media only screen and (min-width : 768px) {
+  .projects-component {
+    .button-container {
+      position: absolute;
+      top: 25%;
+      button {
+        margin: 0 2em;
+      }
+    }
   }
 }
 
@@ -46,15 +73,19 @@
     }
 
     .content-container {
+      margin-top: -2px;
       .slides {
+        margin-top: -3em;
         .slide {
           .slideContent {
             width: 65vw;
           }
         }
-        button {
-          font-size: 25vw;
-        }
+      }
+    }
+    .button-container {
+      button {
+        font-size: 5em;
       }
     }
   }
@@ -78,28 +109,19 @@
     }
 
     .content-container {
+      padding-top: 1em;
       .slides {
+        margin-top: -3em;
         .slide {
           .slideContent {
             width: 75vw;
           }
         }
+      }
+      .button-container {
         button {
-          font-size: 12em;
-          position: none;
-          &:last-child {
-            right: -30%;
-          }
-          &:first-child {
-            left: -30%;
-          }
-          &:last-child,
-          &:first-child {
-            z-index: 5;
-            top: 55%;
-            width: auto;
-            height: auto;
-          }
+          font-size: 4em;
+          z-index: 50;
         }
       }
     }
