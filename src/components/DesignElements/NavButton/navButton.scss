@@ -69,7 +69,7 @@ $borderWidth: 3px;
       font: 150% vars.$rajdhani;
       text-transform: uppercase;
 
-      @include button($btnBackground, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
+      @include button($btnBackground, "../../../assets/design/degrade.png",
       7100%,
       100%,
       none,
