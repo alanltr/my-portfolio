@@ -126,6 +126,7 @@
 
         .text {
           grid-area: title;
+          user-select: none;
         }
 
       }
