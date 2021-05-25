@@ -1,10 +1,10 @@
 @use 'src/styles/vars';
 
-$mainColor: wheat;
+$mainColor: rgb(212, 212, 212);
 
 .modal-component {
   width: 40%;
-  margin: 5em auto;
+  margin: 15% auto;
   color: white;
   border-radius: 20px;
   padding: 1em 2em;
@@ -28,8 +28,12 @@ $mainColor: wheat;
     // Ecart entre les inputs
     .MuiFormControl-root.MuiTextField-root.MuiFormControl-fullWidth,
     .MuiFormControl-root.MuiTextField-root,
-    .submit-btn-div {
+    .MuiFormControlLabel-root {
       margin-top: 1em;
+    }
+
+    .submit-btn-div {
+      margin-top: 1.2em;
     }
     
     // Border Color des inputs
@@ -41,6 +45,25 @@ $mainColor: wheat;
     // Couleur du label lors du focus
     label.Mui-focused {
       color: $mainColor;
+    }
+
+    .MuiFormControlLabel-root {
+      .MuiTypography-body1 {
+
+        font-size: .8em;
+      }
+    }
+
+    // Checkbox
+    .MuiFormControlLabel-root {
+      svg {
+        color: $mainColor;
+      }
+    }
+    .MuiCheckbox-colorSecondary.Mui-checked {
+      svg {
+        color: var(--neonColoring);
+      }
     }
 
     label {

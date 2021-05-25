@@ -21,7 +21,7 @@ import {
 const initialState = {
   // Home
   isOpenSocialMedia: false,
-  isOpenModalMail: true,
+  isOpenModalMail: false,
   // MailModal
   email: '',
   mailObject: '',
