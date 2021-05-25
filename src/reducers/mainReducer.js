@@ -7,6 +7,8 @@ import {
   SET_SUCCESS_MESSAGE,
   TOGGLE_IS_OPEN_SNACKBAR,
   SET_COLOR_TO_DISPLAY,
+  SET_CHECKBOX_AGREEMENT,
+  RESET_FORM,
 } from 'src/actions/homeActions';
 import {
   PREVIOUS_ITEM,
@@ -19,11 +21,12 @@ import {
 const initialState = {
   // Home
   isOpenSocialMedia: false,
-  isOpenModalMail: false,
+  isOpenModalMail: true,
   // MailModal
   email: '',
   mailObject: '',
   mailContent: '',
+  checkboxAuth: false,
   // PersonalSnackbar
   successMessage: 'reducers',
   isASuccess: true,
@@ -80,6 +83,19 @@ function homeReducer(state = initialState, action = {}) {
       return {
         ...state,
         successMessage: action.newValue,
+      };
+    case SET_CHECKBOX_AGREEMENT:
+      return {
+        ...state,
+        checkboxAuth: !state.checkboxAuth,
+      };
+    case RESET_FORM:
+      return {
+        ...state,
+        checkboxAuth: false,
+        email: '',
+        mailContent: '',
+        mailObject: '',
       };
     case NEXT_ITEM:
       return {

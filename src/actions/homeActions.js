@@ -6,6 +6,8 @@ export const SET_IS_A_SUCCESS = 'SET_IS_A_SUCCESS';
 export const SET_SUCCESS_MESSAGE = 'SET_SUCCESS_MESSAGE';
 export const TOGGLE_IS_OPEN_SNACKBAR = 'TOGGLE_IS_OPEN_SNACKBAR';
 export const SET_COLOR_TO_DISPLAY = 'SET_COLOR_TO_DISPLAY';
+export const SET_CHECKBOX_AGREEMENT = 'SET_CHECKBOX_AGREEMENT';
+export const RESET_FORM = 'RESET_FORM';
 
 export const sendEmail = () => ({
   type: SEND_EMAIL,
@@ -43,4 +45,12 @@ export const toggleIsOpenSnackbar = (bool) => ({
 export const setColorToDisplay = (color) => ({
   type: SET_COLOR_TO_DISPLAY,
   color,
+});
+
+export const setCheckboxAgreement = () => ({
+  type: SET_CHECKBOX_AGREEMENT,
+});
+
+export const resetForm = () => ({
+  type: RESET_FORM,
 });

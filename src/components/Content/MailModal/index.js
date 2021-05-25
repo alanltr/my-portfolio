@@ -3,6 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from '@material-ui/core/Modal';
 import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import CheckCircleOutlineRoundedIcon from '@material-ui/icons/CheckCircleOutlineRounded';
+import CheckCircleRoundedIcon from '@material-ui/icons/CheckCircleRounded';
 
 // == Import
 import './mailModal.scss';
@@ -16,6 +20,8 @@ const MailModal = ({
   mailContent,
   changeField,
   sendEmail,
+  setCheckboxAgreement,
+  checkboxAuth,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,6 +61,17 @@ const MailModal = ({
             rows={5}
             variant="filled"
           />
+          <FormControlLabel
+            control={(
+              <Checkbox
+                icon={<CheckCircleOutlineRoundedIcon />}
+                checkedIcon={<CheckCircleRoundedIcon />}
+                checked={checkboxAuth}
+                onChange={setCheckboxAgreement}
+              />
+            )}
+            label="By clicking here, I agree that my data will be used as part of this contact by email"
+          />
           <div className="submit-btn-div glassmorphism">
             <button aria-label="submit-btn" type="submit">Send</button>
           </div>
@@ -84,6 +101,8 @@ MailModal.propTypes = {
   mailContent: PropTypes.string.isRequired,
   changeField: PropTypes.func.isRequired,
   sendEmail: PropTypes.func.isRequired,
+  checkboxAuth: PropTypes.bool.isRequired,
+  setCheckboxAgreement: PropTypes.func.isRequired,
 };
 
 // == Export
