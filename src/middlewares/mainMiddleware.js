@@ -19,8 +19,6 @@ const authMiddleware = (store) => (next) => (action) => {
       } = store.getState().main;
       const { userAgent } = navigator;
 
-      console.log(process.env.MAIL_SERVICE_ID)
-
       // Verif d'email avec regex
       const emailVerif = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
       if (!emailVerif.test(email)) {
