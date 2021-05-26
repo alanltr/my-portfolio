@@ -52,26 +52,26 @@ canvas {
 /**
 *  Glassmorphism
 */
-.glassmorphism {
+.glassmorphism,
+.glassmorphism-1,
+.glassmorphism-2 {
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.103));
   backdrop-filter: blur(10px);
   border-left: 1px solid rgba(255,255,255,0.3);
   border-top: 1px solid rgba(255,255,255,0.3);
   border-radius: 20px;
-  z-index: 1;
-}
-.glassmorphism-1 {
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.103));
-  backdrop-filter: blur(10px);
-  border-left: 1px solid rgba(255,255,255,0.3);
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-radius: 20px;
-  box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
-  z-index: 2;
 }
 @supports not (backdrop-filter: none) {
-  .glassmorphism {
-    background: linear-gradient(to bottom right,hsl(0, 0%, 34.9%),hsla(0, 0%, 61.6%, 0.92));
+  .glassmorphism,
+  .glassmorphism-1 {
+    box-shadow:  -1px -1px 5px #000000,
+                  1px 1px 5px #ffffff;
+  }
+  .glassmorphism-1 {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.404), rgba(255, 255, 255, 0.527));
+  }
+  .glassmorphism-2 {
+    background: linear-gradient(145deg,#303030f0,#7b7b7be8);
   }
 }
 

@@ -21,7 +21,7 @@ import './aboutContent.scss';
 const AboutContent = () => (
   <>
     <h2 className="left-section-title glassmorphism-1 neon-item">My curriculum</h2>
-    <div className="left-section glassmorphism-1">
+    <div className="left-section glassmorphism">
       <div className="left-section-content">
         Coming from a literary baccalaureate, after having
         had a lot of work in particular as manager of several
@@ -31,7 +31,7 @@ const AboutContent = () => (
         jungle. You can contact me from my main page's footer.
         <div className="left-wrapper">
           <div className="left">
-            You also can download my C.V (PDF 329ko) by clicking the arrow
+            You also can download my C.V (PDF 76ko) by clicking the arrow
           </div>
           <div className="right">
             I put here back & front technologies

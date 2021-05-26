@@ -38,7 +38,7 @@ const ProjectsContent = ({
   };
 
   const body = (
-    <div className="projects-modal-component glassmorphism">
+    <div className="projects-modal-component glassmorphism-2">
       <div className="close-cross neon-item" onClick={toggleIsOpenModalProjects}>+</div>
       <h2 className="neon-item" id="projects-modal-title">{currentSlide.title}</h2>
       <div id="projects-modal-description">
