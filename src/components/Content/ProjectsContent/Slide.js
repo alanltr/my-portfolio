@@ -5,6 +5,11 @@ import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 function useTilt(active) {
+  // Suppression de l'effet hover en dessous de 768px
+  if (window.innerWidth < 769) {
+    return;
+  }
+
   const ref = useRef(null);
 
   useEffect(() => {
@@ -56,8 +61,6 @@ const Slide = ({
 }) => {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
-
-  // console.log(image)
 
   return (
     <>
