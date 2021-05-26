@@ -38,8 +38,17 @@
     min-width: 300px;
     max-width: 100vw;
     width: 100%;
+
+
+    // Suppression des animations
+    .button-container-3 {
+      button {
+        animation: none;
+      }
+    }
   }
 }
+
 
 
 canvas {
