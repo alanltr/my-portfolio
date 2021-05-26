@@ -186,11 +186,53 @@
           svg {
             font-size: 30px;
             margin-top: 2px;
+            color: white;
           }
           span {
             display: none;
           }
         }
+      }
+    }
+
+    ul li:nth-child(1) a{
+      background: #0e76a8;
+  
+      &:before{
+        background: #0a597e;
+      }
+      &:after{
+        background: #4e8daa;
+      }
+    }
+  
+    ul li:nth-child(3) a{
+      background: #00aced;
+      &:before{
+        background: #097aa5;
+      }
+      &:after{
+        background: #53b9e0;
+      }
+    }
+  
+    ul li:nth-child(4) a{
+      background: #dd4b39;
+      &:before{
+        background: #b33a2b;
+      }
+      &:after{
+        background: #e66a5a;
+      }
+    }
+  
+    ul li:nth-child(2) a{
+      background: #252323;
+      &:before{
+        background: #141313;
+      }
+      &:after{
+        background: #423f3f;
       }
     }
   }
