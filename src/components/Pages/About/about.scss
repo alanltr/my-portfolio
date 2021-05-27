@@ -91,10 +91,15 @@
       }
 
       .bottom-section {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         margin-left: -37vw;
-        img {
-          width: 100px;
+        div {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          img {
+            height: 90%;
+          }
         }
       }
     }
@@ -168,9 +173,9 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: 33% 34% 33%;
         grid-template-areas:
-          "html css"
-          " js sass"
           " react redux"
+          " sass js"
+          "html css"
         ;
         img {
           width: 60px;
@@ -181,8 +186,14 @@
         height: 80px;
         margin-bottom: 40px;
         margin-left: -37vw;
-        img {
-          width: 80px;
+        div {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          max-width: 25%;
+          img {
+            height: 90%;
+          }
         }
       }
     }

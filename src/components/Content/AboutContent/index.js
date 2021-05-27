@@ -44,11 +44,11 @@ const AboutContent = () => (
       </div>
     </div>
     <div className="bottom-section glassmorphism-1">
-      <div className="logo-display logo-display-8">
-        <img src={nodejsLogo} alt="logo node js" />
-      </div>
       <div className="logo-display logo-display-7">
         <img src={mongodbLogo} alt="logo mongo db" />
+      </div>
+      <div className="logo-display logo-display-8">
+        <img src={nodejsLogo} alt="logo node js" />
       </div>
       <div className="logo-display logo-display-9">
         <img src={mysqlLogo} alt="logo mysql" />

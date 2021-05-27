@@ -50,7 +50,7 @@
     .logo-display-7,
     .logo-display-8 {
       img {
-        width: 180px;
+        width: 90px;
       }
     }
   }
@@ -102,9 +102,9 @@
     grid-template-columns: 33% 34% 33%;
     grid-template-rows: 45% 10% 45%;
     grid-template-areas: 
+    " react redux sass"
+    " . . . "
     " html css js"
-      " . . . "
-      " react redux sass"
     ;
 
     & > * {
@@ -132,9 +132,6 @@
     }
     .logo-display-6 {
       grid-area: js;
-      img {
-        width: 80px;
-      }
     }
   }
   
