@@ -73,7 +73,7 @@ const ProjectsContent = ({
       <div className="project-carousel slides">
         <button
           type="button"
-          onClick={previousLittleItem}
+          onClick={nextLittleItem}
         >‹
         </button>
         {[...carousel, ...carousel].map((slide2, i) => {
@@ -88,7 +88,7 @@ const ProjectsContent = ({
         })}
         <button
           type="button"
-          onClick={nextLittleItem}
+          onClick={previousLittleItem}
         >›
         </button>
       </div>
@@ -101,13 +101,13 @@ const ProjectsContent = ({
         <button
           type="button"
           className="neon-item flicker"
-          onClick={previousItem}
+          onClick={nextItem}
         >‹
         </button>
         <button
           type="button"
           className="neon-item fast-flicker"
-          onClick={nextItem}
+          onClick={previousItem}
         >›
         </button>
       </div>
