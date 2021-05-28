@@ -2,6 +2,7 @@
 // == Import npm
 import React from 'react';
 // import InfoIcon from '@material-ui/icons/Info';
+import { Link } from 'react-router-dom';
 import InfoIcon from './info-solid.svg';
 // == Import
 import './infos.scss';
@@ -20,6 +21,12 @@ const About = () => (
         The smoke background was made by hand with ThreeJs.
         <br />
         The entire project can be viewed on its <a href="https://github.com/alanltr/my-portfolio" target="_blank" rel="noreferrer">github repository</a> !
+      </div>
+      <div className="card-footer">
+        <div className="top">2021 - All rights reserved - Alan Le Trocquer</div>
+        <div className="bottom">
+          <Link to="/legal-mentions">Legal Mentions</Link>
+        </div>
       </div>
     </div>
   </div>
