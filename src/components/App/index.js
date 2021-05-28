@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import About from 'src/components/Pages/About';
 import Home from 'src/containers/Home';
 import Projects from 'src/components/Pages/Projects';
+import LegalMentions from 'src/components/Pages/LegalMentions';
 
 // == Import
 import './styles.scss';
@@ -25,6 +26,9 @@ const App = () => {
         </Route>
         <Route path="/projects">
           <Projects />
+        </Route>
+        <Route path="/legal-mentions">
+          <LegalMentions />
         </Route>
       </Switch>
     </AnimatePresence>
