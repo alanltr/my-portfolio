@@ -1,0 +1,152 @@
+@use 'src/styles/vars';
+
+.legal-mentions-component {
+  height: 100vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 15% auto;
+  grid-template-areas: 
+    " backlink title . "
+    " . content . "
+    " . toplink . "
+  ;
+  margin-bottom: 5em;
+
+  .legal-title {
+    grid-area: title;
+    place-self: center;
+    align-self: end;
+  }
+  .legal-backlink {
+    grid-area: backlink;
+    transform: rotate(90deg);
+    .arrow-container {
+      top: 25%;
+      left: 70%;
+    }
+  }
+  .top-link {
+    grid-area: toplink;
+    place-self: center;
+    padding-bottom: 2em;
+    font-size: 1.3em;
+    font-family: vars.$rajdhani;
+  }
+  .cards {
+    grid-area: content;
+    font-family: vars.$rajdhani;
+    margin-top: 25px;
+    .card-legal {
+      border-radius: 12px;
+      padding: 1em;
+      margin: 1em;
+
+      h2 {
+        font-size: 2em;
+        font-weight: 500;
+        margin: 0 1em .5em 1em;
+      }
+
+      ul {
+        li {
+          margin-top: 4px;
+          font-size: 1.2em;
+        }
+      }
+
+      &-3 {
+        div:nth-child(3) {
+          margin: 1em 0;
+        }
+        div {
+          font-size: 1.2em;
+          line-height: 25px;
+          a {
+            color: #0099ff;
+            border-bottom: 1px solid transparent;
+            font-weight: 500;
+            &:hover{
+                border-bottom-color: #0099ff;
+            }
+          }
+        }
+        margin-bottom: 50px;
+      }
+    }
+
+  }
+  // &::-webkit-scrollbar {
+  //   // Valeur non prise en compte, présente uniqument pour que ::-webkit-scrollbar-thumb soit détecté
+  //   height: 100%;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   background-color: transparent;
+  //   border: 3px var(--neonColoring) groove;
+  //   border-radius: 5em;
+  // }
+  // &::-webkit-scrollbar-track {
+  //   background: transparent;
+  // }
+}
+
+// Mini PC
+@media only screen and (min-width : 768px) and (max-width : 1050px) {
+  .legal-mentions-component {
+    grid-template-areas:
+    " backlink title title "
+    " . content . "
+    " . toplink . ";
+    .legal-title {
+      h1 {
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+// Tablette
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+  .legal-mentions-component {
+    grid-template-rows: 10% auto;
+    grid-template-areas:
+    " backlink title title "
+    " . content . "
+    " . toplink . ";
+    .legal-title {
+      h1 {
+        font-size: 2.7em;
+      }
+    }
+  }
+}
+
+// Phone
+@media only screen and (max-width : 479px) {
+  .legal-mentions-component {
+    margin-bottom: 0;
+
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 75px auto;
+    grid-template-areas: 
+      " backlink title title "
+      " content content content "
+      " . toplink . "
+    ;
+    .legal-title {
+      align-self: center;
+      h1 {
+        padding-top: 15px;
+        font-size: 2em;
+      }
+    }
+
+    .cards {
+      .card-legal {
+        h2 {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+}
